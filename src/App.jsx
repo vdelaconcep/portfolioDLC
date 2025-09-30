@@ -1,21 +1,20 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import '@/style.css';
 
-import Layout from "@/pages/layout";
-import Home from "@/pages/home";
+import Home from "@/sections/home";
+import SobreMi from "@/sections/sobreMi";
+import FullStack from '@/sections/fullStack';
+import Uxui from '@/sections/uxui';
+import Contacto from '@/sections/contacto';
 
 function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <Home />
+      <SobreMi />
+      <FullStack />
+      <Uxui />
+      <Contacto />
     </>
   )
 }
