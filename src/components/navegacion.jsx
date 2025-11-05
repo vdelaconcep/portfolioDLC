@@ -6,7 +6,7 @@ const Navegacion = () => {
 
     const opacidadBg = useTransform(
         scrollY,
-        [0, 100],
+        [0, 10],
         [0, 1]
     );
 
@@ -37,25 +37,33 @@ const Navegacion = () => {
 
 
     return (
-        <nav
+        <motion.nav
             className="fixed top-0 left-0 right-0 z-50 py-4 flex justify-center"
             style={{
                 backgroundColor: useTransform(
                     opacidadBg,
-                    (opacity) => `rgba(0, 0, 0, ${opacity})`
+                    (opacity) => `rgba(0, 0, 0, ${opacity * 0.4})`
                 ),
+                backdropFilter: useTransform(
+                    opacidadBg,
+                    (opacity) => `blur(${opacity * 12}px)`
+                ),
+                borderBottom: useTransform(
+                    opacidadBg,
+                    (opacity) => `1px solid rgba(255, 255, 255, ${opacity * 0.1})`
+                )
             }}>
             <ul className="list-none flex text-gray-400 text-lg font-medium">
                 {simpleItems.map(item => 
                     <li
                         key={item.linkto}
-                        className="mx-2 last-of-type:mr-0 cursor-pointer hover:bg-pink-300 hover:text-gray-900 px-3 rounded-2xl"
+                        className="mx-2 last-of-type:mr-0 cursor-pointer hover:bg-[#8473FF] hover:text-gray-900 px-3 rounded-2xl"
                         onClick={() => { scrollToSection(item.linkto); }}>
                         {item.titulo}
                     </li>
                 )}
             </ul>
-        </nav>
+        </motion.nav>
     );
 };
 

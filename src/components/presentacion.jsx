@@ -3,7 +3,7 @@ import { article } from "framer-motion/client";
 const Presentacion = ({clase}) => {
     return (
         <article className={`flex justify-center items-center gap-5 ${clase && clase}`}>
-            <div className="bg-[#EC3E50] rounded-full h-[250px] w-[250px]">
+            <div className="bg-[#a4326d] rounded-full h-[250px] w-[250px]">
 
             </div>
             <div className="px-4 w-[500px] flex flex-col h-full justify-center">

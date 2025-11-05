@@ -5,10 +5,28 @@
     src: url('./assets/fonts/CoolveticaRg.otf');
 }
 
+@font-face {
+    font-family: 'Roboto';
+    src: url('./assets/fonts/Roboto.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./assets/fonts/Montserrat.ttf');
+}
+
 .coolvetica {
     font-family: 'Coolvetica';
 }
 
 .courier {
     font-family: 'Courier New', Courier, monospace;
+}
+
+.roboto {
+    font-family: 'Roboto';
+}
+
+.montserrat {
+    font-family: 'Montserrat';
 }

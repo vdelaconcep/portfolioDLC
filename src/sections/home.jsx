@@ -5,7 +5,7 @@ import Navegacion from "@/components/navegacion";
 const Home = () => {
 
     return (
-        <section id='home' className="bg-gradient-to-tr from-[#678F6C] from-2% via-[#316149] via-20% to-[#03121D] h-[100dvh] to-80% flex flex-col px-8 md:px-10 overflow-hidden">
+        <section id='home' className="bg-gradient-to-tr from-[#1B093F] from-2% to-[#080918] h-[100dvh] to-80% flex flex-col px-8 md:px-10 overflow-hidden montserrat">
             <motion.article
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -15,7 +15,7 @@ const Home = () => {
             </motion.article>
             <div className='h-full flex flex-col justify-center'>
                 <article
-                    className="text-white text-[40px] md:text-[50px] lg:text-[70px] xl:text-[100px] coolvetica text-shadow-md text-shadow-gray-900 flex flex-col mb-5">
+                    className="text-white text-[40px] md:text-[50px] lg:text-[70px] xl:text-[100px] text-shadow-md text-shadow-gray-900 flex flex-col mb-5 font-bold">
                     <motion.h1
                         initial={{ opacity: 0, x: -500 }}
                         animate={{ opacity: 1, x: 0 }}
@@ -25,10 +25,10 @@ const Home = () => {
                         initial={{ opacity: 0, x: 500 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1.5 }}
-                        className="md:mt-[-25px] text-pink-300">Diseño UX/UI</motion.h1>
+                        className="md:mt-[-25px] text-[#8473FF]">Diseño UX/UI</motion.h1>
                 </article>
 
-                <article className='text-gray-300 text-center text-xl font-normal courier flex justify-center'>
+                <article className='text-gray-300 text-center text-xl font-normal flex justify-center'>
                     <h1>Portfolio de Valeria de la Concepción María </h1>
                 </article>
             </div>
