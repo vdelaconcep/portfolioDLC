@@ -1,6 +1,12 @@
 import Presentacion from "@/components/presentacion";
+import Subtitulo from "@/components/subtitulo";
 import ExperienciaCard from "@/components/experienciaCard";
+import ItemFormacion from "@/components/itemFormacion";
 import { motion } from "framer-motion";
+import logoUBA from '@/assets/img/UBA.png';
+import logoUTN from '@/assets/img/UTN.png';
+import logoEIT from '@/assets/img/EIT.svg'
+
 
 const experiencia = [
     {
@@ -8,8 +14,7 @@ const experiencia = [
         periodo: '2023 - actual',
         items: [
             'Responsable de calidad',
-            'Gestión de procedimientos y normas',
-            'Organización de documentos'
+            'Gestión de procedimientos y normas'
         ]
     },
     {
@@ -30,6 +35,30 @@ const experiencia = [
             'Corrección de trabajos prácticos'
         ]
     }
+]
+
+const formacion = [
+    {
+        imagen: logoUTN,
+        titulo: 'Diplomatura en desarrollo UX/UI',
+        institucion: 'UTN-FRBA',
+        sub: 'Ver certificado',
+        certificado: 'https://validator.centrodeelearning.com/validator/d066cc46-16cd-4c15-a51f-47cb8f269e59'
+    },
+    {
+        imagen: logoEIT,
+        titulo: 'Full-Stack Engineer',
+        institucion: 'Educación IT',
+        sub: 'Ver certificado',
+        certificado: 'https://www.educacionit.com/perfil/valeria-de-la-concepcion-maria-1033137/certificado/73594?_gl'
+    },
+    {
+        imagen: logoUBA,
+        titulo: 'Ingeniería mecánica',
+        institucion: 'Facultad de Ingeniería, UBA',
+        sub: 'Tesis pendiente'
+    }
+    
 ]
 
 const itemVariants = {
@@ -54,18 +83,16 @@ const SobreMI = () => {
         <section id="about" className="bg-[#150C27] flex flex-col items-center p-10 pt-18 montserrat">
             <div className="h-full w-full p-4 pt-6">
                 <Presentacion clase='mb-6' />
-                <article className="flex mb-5 items-center gap-2">
-                    <h2 className="text-[#8473FF] text-3xl whitespace-nowrap font-bold">
-                        Experiencia
-                    </h2>
-                    <hr className="flex-1 text-gray-600" />
-                </article>
+                <Subtitulo
+                    texto='Experiencia'
+                    clase='mb-10'
+                />
                 
-                <div className="flex gap-3 justify-center w-full mb-15">
+                <div className="flex gap-3 justify-center w-full mb-10">
                     
                     {experiencia.map((trabajo, index) => (
                         <motion.div
-                            key={index}
+                            key={trabajo.titulo}
                             custom={index * 0.20}
                             variants={itemVariants}
                             initial="hidden"
@@ -84,18 +111,42 @@ const SobreMI = () => {
                         
                     ))}
                 </div>
-                <article className="flex mb-5 items-center gap-2">
-                    <h2 className="text-[#8473FF] text-3xl whitespace-nowrap font-bold">
-                        Formación
-                    </h2>
-                    <hr className="flex-1 text-gray-600" />
-                </article>
-                <article className="flex mb-5 items-center gap-2">
-                    <h2 className="text-[#8473FF] text-3xl whitespace-nowrap font-bold">
-                        Herramientas de trabajo
-                    </h2>
-                    <hr className="flex-1 text-gray-600" />
-                </article>
+
+                <Subtitulo
+                    texto='Formación'
+                    clase='mb-10'
+                />
+                <div className="grid grid-cols-3 gap-4 w-full mb-10">
+                    {formacion.map((item, index) => (
+                        <motion.div
+                            key={item.titulo}
+                            custom={index * 0.20}
+                            variants={itemVariants}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{
+                                once: true,
+                                amount: 0.3
+                            }}
+                            className="flex-1"
+                        >
+                        <ItemFormacion
+                            imagen={item.imagen}
+                            titulo={item.titulo}
+                            institucion={item.institucion}
+                            sub={item.sub}
+                            certificado={item.certificado ? item.certificado : null} />
+                        </motion.div>)
+                    )}
+                </div>
+                <Subtitulo
+                    texto='Herramientas utilizadas'
+                    clase='mb-10'
+                />
+                <Subtitulo
+                    texto='Otras habilidades'
+                    clase='mb-10'
+                />
                 
             </div>
             
