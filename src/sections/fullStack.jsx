@@ -1,19 +1,19 @@
 import Subtitulo from "@/components/subtitulo";
 
-import portada from "@/assets/img/la-nave.vercel.app_.png";
-import carrito from "@/assets/img/la-nave.vercel.app_ (5).png";
-import login from "@/assets/img/la-nave.vercel.app_ (6).png";
-import cards from "@/assets/img/la-nave.vercel.app_ (4).png";
-import admin from "@/assets/img/la-nave.vercel.app_ (8).png";
-import main from "@/assets/img/halmovies.onrender.com_catalog.png";
-import portadaMobile from "@/assets/img/halmovies.onrender.com_.png";
-import mainMobile from "@/assets/img/halmovies.onrender.com_ (1).png";
-import detalleMobile from "@/assets/img/halmovies.onrender.com_ (2).png";
+import portada from "@/assets/img/LN/la-nave.vercel.app_.png";
+import carrito from "@/assets/img/LN/la-nave.vercel.app_ (5).png";
+import login from "@/assets/img/LN/la-nave.vercel.app_ (6).png";
+import cards from "@/assets/img/LN/la-nave.vercel.app_ (4).png";
+import admin from "@/assets/img/LN/la-nave.vercel.app_ (8).png";
+import main from "@/assets/img/HAL/halmovies.onrender.com_catalog.png";
+import portadaMobile from "@/assets/img/HAL/halmovies.onrender.com_.png";
+import mainMobile from "@/assets/img/HAL/halmovies.onrender.com_ (1).png";
+import detalleMobile from "@/assets/img/HAL/halmovies.onrender.com_ (2).png";
 
-import mainDesktop from "../assets/img/aaal-beta.vercel.app_.png";
-import formulario from "../assets/img/aaal-beta.vercel.app_ (2).png";
-import mensajes from "../assets/img/aaal-beta.vercel.app_ (3).png";
-import galeria from "../assets/img/aaal-beta.vercel.app_ (4).png";
+import mainDesktop from "../assets/img/AAAL/aaal-beta.vercel.app_.png";
+import formulario from "../assets/img/AAAL/aaal-beta.vercel.app_ (2).png";
+import mensajes from "../assets/img/AAAL/aaal-beta.vercel.app_ (3).png";
+import galeria from "../assets/img/AAAL/aaal-beta.vercel.app_ (4).png";
 
 const FullStack = () => {
     return (

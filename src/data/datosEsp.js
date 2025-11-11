@@ -1,6 +1,6 @@
-import logoUBA from '@/assets/img/UBA.png';
-import logoUTN from '@/assets/img/UTN.png';
-import logoEIT from '@/assets/img/EIT.svg';
+import logoUBA from '@/assets/img/formacion/UBA.png';
+import logoUTN from '@/assets/img/formacion/UTN.png';
+import logoEIT from '@/assets/img/formacion/EIT.svg';
 
 export const experiencia = [
     {
