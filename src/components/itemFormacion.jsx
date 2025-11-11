@@ -1,6 +1,6 @@
 const ItemFormacion = ({imagen, titulo, institucion, sub, certificado}) => {
     return (
-        <article className="text-white flex flex-col items-center justify-between h-full p-4 rounded-2xl flex-1 border-1 border-gray-600 bg-gradient-to-tr from-white/5 to-white/10">
+        <article className="text-white flex flex-col items-center justify-between h-full p-4 rounded-2xl flex-1 border-1 border-gray-600 bg-gradient-to-tr from-purple-500/5 to-purple-200/20">
             <div className="flex h-full items-center justify-center">
                 <img
                     className="max-h-[150px] w-full mb-2 object-scale-down"

@@ -1,8 +1,33 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 const Navegacion = () => {
 
     const { scrollY } = useScroll();
+
+    const [inUXUI, setInUXUI] = useState(false);
+
+    useEffect(() => {
+        const uxuiSection = document.getElementById('uxui');
+
+        if (!uxuiSection) return;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    setInUXUI(entry.isIntersecting);
+                });
+            },
+            {
+                threshold: 0.1,
+                rootMargin: '-80px 0px 10% 0px'
+            }
+        );
+
+        observer.observe(uxuiSection);
+
+        return () => observer.disconnect();
+    }, []);
 
     const opacidadBg = useTransform(
         scrollY,
@@ -42,7 +67,7 @@ const Navegacion = () => {
             style={{
                 backgroundColor: useTransform(
                     opacidadBg,
-                    (opacity) => `rgba(0, 0, 0, ${opacity * 0.4})`
+                    (opacity) => inUXUI ? `rgba(0, 0, 0, ${opacity * 0.9})` : `rgba(0, 0, 0, ${opacity * 0.4})`
                 ),
                 backdropFilter: useTransform(
                     opacidadBg,
@@ -53,7 +78,7 @@ const Navegacion = () => {
                     (opacity) => `1px solid rgba(255, 255, 255, ${opacity * 0.1})`
                 )
             }}>
-            <ul className="list-none flex text-gray-400 text-lg font-medium">
+            <ul className='list-none flex text-lg font-medium text-gray-400'>
                 {simpleItems.map(item => 
                     <li
                         key={item.linkto}

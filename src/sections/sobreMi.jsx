@@ -24,7 +24,7 @@ const itemVariants = {
 
 const SobreMI = () => {
     return (
-        <section id="about" className="bg-gray-800 flex flex-col items-center p-10 pt-18 montserrat">
+        <section id="about" className="bg-gradient-to-tr from-gray-700 to-gray-900 flex flex-col items-center p-10 pt-18 montserrat">
             <div className="h-full w-full p-4 pt-6">
                 <Presentacion clase='mb-15' />
                 <Subtitulo

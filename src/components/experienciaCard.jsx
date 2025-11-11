@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 const ExperienciaCard = ({ titulo, periodo, items }) => {
     
     return (
-        <article className="h-full p-4 rounded-2xl text-white flex-1 border-1 border-gray-600 bg-gradient-to-tr from-white/5 to-white/10">
+        <article className="h-full p-4 rounded-2xl text-white flex-1 border-1 border-gray-600 bg-gradient-to-tr from-purple-500/5 to-purple-300/15">
             <div className='mb-2'>
                 <h1 className="font-bold text-lg mr-3">{titulo}</h1>
                 <h2 className='text-[#b86dbf] whitespace-nowrap'>{periodo}</h2>

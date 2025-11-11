@@ -30,7 +30,7 @@ const Home = () => {
                         Diseño UX/UI</motion.h1>
                 </article>
 
-                <article className='text-gray-300 text-center text-xl font-normal flex justify-center montserrat mt-5'>
+                <article className='text-gray-300 text-center text-xl font-normal flex justify-center montserrat mt-25'>
                     <h1>Portfolio de Valeria de la Concepción María </h1>
                 </article>
             </div>
