@@ -5,7 +5,7 @@ import Navegacion from "@/components/navegacion";
 const Home = () => {
 
     return (
-        <section id='home' className="bg-gradient-to-tr from-[#1B093F] from-2% to-[#080918] h-[100dvh] to-80% flex flex-col px-8 md:px-10 overflow-hidden montserrat">
+        <section id='home' className="bg-gradient-to-tr from-[#1B093F] from-2% to-[#080918] h-[100dvh] to-80% flex flex-col px-8 md:px-10 overflow-hidden comfortaa">
             <motion.article
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -30,7 +30,7 @@ const Home = () => {
                         Diseño UX/UI</motion.h1>
                 </article>
 
-                <article className='text-gray-300 text-center text-xl font-normal flex justify-center'>
+                <article className='text-gray-300 text-center text-xl font-normal flex justify-center montserrat mt-5'>
                     <h1>Portfolio de Valeria de la Concepción María </h1>
                 </article>
             </div>

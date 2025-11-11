@@ -1,11 +1,22 @@
+import { motion } from "framer-motion";
+
 const Divisor = () => {
     return (
-        <div
+        <motion.div
             className="w-full h-[20px]"
             style={{
-                backgroundImage: 'repeating-linear-gradient(-45deg, black 0, black 15px, white 15px, white 30px)'
+                backgroundImage: 'repeating-linear-gradient(-45deg, black 0, black 15px, white 15px, white 30px)',
+                backgroundSize: '42.43px 42.43px'
             }}
-        ></div>
+            animate={{
+                backgroundPosition: ['0px 0px', '-42.43px 0px']
+            }}
+            transition={{
+                duration: 2,
+                ease: 'linear',
+                repeat: Infinity
+            }}
+        ></motion.div>
     )
 };
 

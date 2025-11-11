@@ -15,6 +15,11 @@
     src: url('./assets/fonts/Montserrat.ttf');
 }
 
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('./assets/fonts/Comfortaa-VariableFont_wght.ttf');
+}
+
 .coolvetica {
     font-family: 'Coolvetica';
 }
@@ -29,4 +34,8 @@
 
 .montserrat {
     font-family: 'Montserrat';
+}
+
+.comfortaa {
+    font-family: 'Comfortaa';
 }
