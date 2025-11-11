@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
-const Navegacion = () => {
+const Navegacion = ({ clase }) => {
 
     const { scrollY } = useScroll();
 
@@ -52,7 +52,7 @@ const Navegacion = () => {
             titulo: 'Contacto',
             linkto: 'contacto'
         }
-    ]
+    ];
 
     const scrollToSection = (sectionId) => {
         document.getElementById(sectionId)?.scrollIntoView({
@@ -63,7 +63,10 @@ const Navegacion = () => {
 
     return (
         <motion.nav
-            className="fixed top-0 left-0 right-0 z-50 py-4 flex justify-center"
+            className={`fixed top-0 left-0 right-0 z-50 py-4 flex justify-center ${clase && clase}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2 }}
             style={{
                 backgroundColor: useTransform(
                     opacidadBg,

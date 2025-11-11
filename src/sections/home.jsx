@@ -6,14 +6,8 @@ const Home = () => {
 
     return (
         <section id='home' className="bg-gradient-to-tr from-[#1B093F] from-2% to-[#080918] h-[100dvh] to-80% flex flex-col px-8 md:px-10 overflow-hidden comfortaa">
-            <motion.article
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{duration: 2}}
-                className="flex justify-end mt-5">
-                <Navegacion />
-            </motion.article>
-            <div className='h-full flex flex-col justify-center'>
+            <Navegacion />  
+            <div className='h-full flex flex-col justify-center relative'>
                 <article
                     className="text-[40px] md:text-[50px] lg:text-[70px] xl:text-[100px] flex flex-col mb-5 font-bold">
                     <motion.h1
@@ -30,7 +24,7 @@ const Home = () => {
                         Diseño UX/UI</motion.h1>
                 </article>
 
-                <article className='text-gray-300 text-center text-xl font-normal flex justify-center montserrat mt-25'>
+                <article className='text-gray-300 text-center text-xl font-normal flex justify-center montserrat mt-25 absolute bottom-25 left-1/2 -translate-x-1/2'>
                     <h1>Portfolio de Valeria de la Concepción María </h1>
                 </article>
             </div>

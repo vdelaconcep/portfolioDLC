@@ -22,7 +22,7 @@ const FullStack = () => {
 
             <Subtitulo
                 texto='Tienda de ropa'
-                clase='my-10'/>
+                clase='mt-15 mb-10'/>
             <article className="flex gap-7 my-10">
                 <img
                     className="rounded-xl h-[300px] shadow-md shadow-gray-400"
@@ -81,7 +81,9 @@ const FullStack = () => {
                 </div>
             </article>
             
-            <Subtitulo texto='Plataforma de películas' />
+            <Subtitulo
+                texto='Plataforma de películas'
+                clase='mt-20 mb-10'/>
 
             <article className="flex gap-7 my-10 w-full">
                 <img
@@ -119,7 +121,9 @@ const FullStack = () => {
             
 
 
-            <Subtitulo texto='Proyecto en desarrollo' />
+            <Subtitulo
+                texto='Proyecto en desarrollo'
+                clase='mt-20 mb-10'/>
 
             <article className="flex gap-7 my-10">
                 <img
