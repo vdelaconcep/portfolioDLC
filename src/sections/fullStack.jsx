@@ -17,64 +17,79 @@ import galeria from "@/assets/img/AAAL/aaal-beta.vercel.app_ (4).png";
 
 const FullStack = () => {
     return (
-        <section id="fullstack" className="min-h-[100dvh] bg-[#1f1239] p-10 pt-18 montserrat flex flex-col items-center">
+        <section id="fullstack" className="min-h-[100dvh] bg-gradient-to-tr from-[#1f1239] to-black p-10 pt-18 montserrat flex flex-col items-center">
             <h1 className="text-5xl font-bold text-white text-shadow-md text-shadow-gray-900 my-4 text-center comfortaa">Proyectos Full-Stack</h1>
             <div className="max-w-[1440px]">
                 <Subtitulo
                     texto='Tienda de ropa'
-                    clase='mt-15 mb-10' />
+                    clase='my-10' />
                 <article className="flex gap-7 my-10">
-                    <img
-                        className="rounded-xl h-[300px] shadow-md shadow-gray-400"
-                        src={portada}
-                        alt="La Nave portada" />
-                    <div className="w-full">
+                    <div className="w-1/3">
+                        <img
+                            className="rounded-xl shadow-md shadow-gray-400"
+                            src={portada}
+                            alt="La Nave portada" />
+                    </div>
+                    
+                    <div className="w-2/3">
                         <p className="text-white">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ullam corporis odit totam est reiciendis incidunt sed iure, ducimus beatae natus quas neque, consectetur aliquam doloribus repudiandae atque. Atque, unde.
                         </p>
                     </div>
                 </article>
                 <article className="flex gap-7 my-10">
-                    <div className="w-full">
+                    <div className="w-2/3">
                         <p className="text-white">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ullam corporis odit totam est reiciendis incidunt sed iure, ducimus beatae natus quas neque, consectetur aliquam doloribus repudiandae atque. Atque, unde.
                         </p>
                     </div>
-                    <img
-                        className="rounded-xl h-[300px] shadow-md shadow-gray-400"
-                        src={cards}
-                        alt="La Nave cards" />
+                    <div className="w-1/3">
+                        <img
+                            className="rounded-xl shadow-md shadow-gray-400"
+                            src={cards}
+                            alt="La Nave cards" />
+                    </div>
+                    
 
                 </article>
                 <article className="flex gap-7 my-10">
-                    <img
-                        className="rounded-xl h-[300px] shadow-md shadow-gray-400"
-                        src={carrito}
-                        alt="La Nave carrito" />
-                    <div className="w-full">
+                    <div className="w-1/3">
+                        <img
+                            className="rounded-xl shadow-md shadow-gray-400"
+                            src={carrito}
+                            alt="La Nave carrito" />
+                    </div>
+                    
+                    <div className="w-2/3">
                         <p className="text-white">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ullam corporis odit totam est reiciendis incidunt sed iure, ducimus beatae natus quas neque, consectetur aliquam doloribus repudiandae atque. Atque, unde.
                         </p>
                     </div>
                 </article>
                 <article className="flex gap-7 my-10">
-                    <div className="w-full">
+                    <div className="w-2/3">
                         <p className="text-white">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ullam corporis odit totam est reiciendis incidunt sed iure, ducimus beatae natus quas neque, consectetur aliquam doloribus repudiandae atque. Atque, unde.
                         </p>
                     </div>
-                    <img
-                        className="rounded-xl h-[300px] shadow-md shadow-gray-400"
-                        src={login}
-                        alt="La Nave login" />
+                    <div className="w-1/3">
+                        <img
+                            className="rounded-xl shadow-md shadow-gray-400"
+                            src={login}
+                            alt="La Nave login" />
+                    </div>
+                    
 
                 </article>
                 <article className="flex gap-7 my-10">
-                    <img
-                        className="rounded-xl h-[300px] shadow-md shadow-gray-400"
-                        src={admin}
-                        alt="La Nave admin" />
-                    <div className="w-full">
+                    <div className="w-1/3">
+                        <img
+                            className="rounded-xl shadow-md shadow-gray-400"
+                            src={admin}
+                            alt="La Nave admin" />
+                    </div>
+                    
+                    <div className="w-2/3">
                         <p className="text-white">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ullam corporis odit totam est reiciendis incidunt sed iure, ducimus beatae natus quas neque, consectetur aliquam doloribus repudiandae atque. Atque, unde.
                         </p>
@@ -86,11 +101,14 @@ const FullStack = () => {
                     clase='mt-20 mb-10' />
 
                 <article className="flex gap-7 my-10 w-full">
-                    <img
-                        className="rounded-xl h-[300px] shadow-md shadow-gray-400"
-                        src={main}
-                        alt="HAL main desktop" />
-                    <div className="w-full">
+                    <div className="w-1/2">
+                        <img
+                            className="rounded-xl shadow-md shadow-gray-400"
+                            src={main}
+                            alt="HAL main desktop" />
+                    </div>
+                    
+                    <div className="w-1/2">
                         <p className="text-white">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic repellat, voluptates tempore dolor, provident aspernatur voluptatem perferendis pariatur reprehenderit nulla saepe accusantium dolore placeat atque eaque necessitatibus dignissimos. Veniam, adipisci.
                         </p>
@@ -98,12 +116,12 @@ const FullStack = () => {
 
                 </article>
                 <article className="flex gap-7 my-10 w-full">
-                    <div className="w-full">
+                    <div className="w-1/2">
                         <p className="text-white">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic repellat, voluptates tempore dolor, provident aspernatur voluptatem perferendis pariatur reprehenderit nulla saepe accusantium dolore placeat atque eaque necessitatibus dignissimos. Veniam, adipisci.
                         </p>
                     </div>
-                    <div className="flex justify-between w-full">
+                    <div className="flex justify-between w-1/2">
                         <img
                             className="rounded-xl h-[300px] shadow-md shadow-gray-400 border-6 border-gray-800"
                             src={portadaMobile}
@@ -126,11 +144,14 @@ const FullStack = () => {
                     clase='mt-20 mb-10' />
 
                 <article className="flex gap-7 my-10">
-                    <img
-                        className="rounded-xl h-[300px] shadow-md shadow-gray-400"
-                        src={mainDesktop}
-                        alt="AAAL home desktop" />
-                    <div className="w-full">
+                    <div className="w-1/3">
+                        <img
+                            className="rounded-xl shadow-md shadow-gray-400"
+                            src={mainDesktop}
+                            alt="AAAL home desktop" />
+                    </div>
+                    
+                    <div className="w-2/3">
                         <p className="text-white">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ullam corporis odit totam est reiciendis incidunt sed iure, ducimus beatae natus quas neque, consectetur aliquam doloribus repudiandae atque. Atque, unde.
                         </p>
@@ -138,12 +159,12 @@ const FullStack = () => {
                 </article>
 
                 <article className="flex gap-7 my-10 w-full">
-                    <div className="w-full">
+                    <div className="w-1/2">
                         <p className="text-white">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic repellat, voluptates tempore dolor, provident aspernatur voluptatem perferendis pariatur reprehenderit nulla saepe accusantium dolore placeat atque eaque necessitatibus dignissimos. Veniam, adipisci.
                         </p>
                     </div>
-                    <div className="flex justify-between w-full">
+                    <div className="flex justify-between w-1/2">
                         <img
                             className="rounded-xl h-[300px] shadow-md shadow-gray-400 border-6 border-gray-800"
                             src={formulario}
