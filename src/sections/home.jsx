@@ -9,7 +9,7 @@ const Home = () => {
             <Navegacion />  
             <div className='h-full flex flex-col justify-center relative max-w-[1440px]'>
                 <article
-                    className="text-[40px] md:text-[50px] lg:text-[70px] xl:text-[100px] flex flex-col mb-5 font-bold">
+                    className="text-[40px] md:text-[50px] lg:text-[70px] xl:text-[90px] flex flex-col mb-5 font-bold">
                     <motion.h1
                         className='text-white text-shadow-md text-shadow-gray-900'
                         initial={{ opacity: 0, x: -500 }}
@@ -25,7 +25,7 @@ const Home = () => {
                 </article>
 
                 <article className='text-gray-300 text-center text-xl font-normal flex justify-center montserrat mt-25 absolute bottom-25 left-1/2 -translate-x-1/2'>
-                    <h1>Portfolio de Valeria de la Concepción María </h1>
+                    <h1 className='text-[#c005d1]'>Portfolio de <b className='text-white'>Valeria de la Concepción María</b> </h1>
                 </article>
             </div>
             

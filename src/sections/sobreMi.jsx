@@ -2,8 +2,10 @@ import Presentacion from "@/components/presentacion";
 import Subtitulo from "@/components/subtitulo";
 import ExperienciaCard from "@/components/experienciaCard";
 import ItemFormacion from "@/components/itemFormacion";
+import ItemOtros from "@/components/itemOtros";
 import { motion } from "framer-motion";
-import { experiencia, formacion } from "@/data/datosEsp";
+import { experiencia, formacion, otros } from "@/data/datosEsp";
+import { herramientas } from "@/data/datos";
 
 const itemVariants = {
     hidden: {
@@ -18,6 +20,22 @@ const itemVariants = {
             delay: delay,
             ease: "easeInOut",
             times: [0, 0.5, 1]
+        }
+    })
+}
+
+const itemVariants2 = {
+    hidden: {
+        x: -50,
+        opacity: 0
+    },
+    visible: (delay) => ({
+        x: [-50, 0],
+        opacity: [0, 1],
+        transition: {
+            duration: 1,
+            delay: delay,
+            ease: "easeInOut"
         }
     })
 }
@@ -87,10 +105,47 @@ const SobreMI = () => {
                     texto='Herramientas utilizadas'
                     clase='mb-10'
                 />
+                <div className="flex justify-between w-full mb-15">
+                    {herramientas.map((item, index) => (
+                        <motion.div
+                            className="flex flex-col items-center"
+                            key={item.titulo}
+                            custom={index * 0.20}
+                            variants={itemVariants2}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{
+                                once: true,
+                                amount: 0.3
+                            }}
+                        >
+                            <article className="bg-radial from-gray-600 to-gray-900 rounded-xl ring-1 ring-gray-600 p-2">
+                                <svg
+                                    width='48'
+                                    height='48'
+                                    fill={item.color}>
+                                        <use href={`/sprite.svg#${item.titulo}`}/>
+                                </svg>
+                            </article>
+                            <h4 className="text-white capitalize mt-3">{item.titulo}</h4>
+                        </motion.div>
+                    ) 
+
+                    )}
+                </div>
                 <Subtitulo
                     texto='Otras habilidades'
                     clase='mb-10'
                 />
+                {otros.map(item => (
+                    <ItemOtros
+                        clase='mb-3'
+                        titulo={item.titulo}
+                        descripcion={item.descripcion}
+                        certificado={item.certificado} />
+                ))
+
+                }
                 
             </div>
             

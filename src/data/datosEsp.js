@@ -1,6 +1,7 @@
 import logoUBA from '@/assets/img/formacion/UBA.png';
 import logoUTN from '@/assets/img/formacion/UTN.png';
-import logoEIT from '@/assets/img/formacion/EIT.svg';
+import logoEIT from '@/assets/img/formacion/EIT.png';
+
 
 export const experiencia = [
     {
@@ -54,3 +55,16 @@ export const formacion = [
     }
 
 ];
+
+export const otros = [
+    {
+        titulo: 'Idioma inglés',
+        descripcion: 'Proficient C2',
+        certificado:'https://cert.efset.org/fwxQLT'
+    },
+    {
+        titulo: 'Fundamentos de SCRUM',
+        descripcion: 'Educación IT',
+        certificado:'https://www.educacionit.com/perfil/valeria-de-la-concepcion-maria-1033137/certificado/80170?_gl'
+    }
+]
