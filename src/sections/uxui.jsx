@@ -4,6 +4,8 @@ import mockup from "@/assets/img/veteclick/mockup.jpg";
 import prototipo from "@/assets/img/veteclick/prototipo.jpg";
 import uikit from "@/assets/img/veteclick/UIkit.jpg";
 
+import video from "@/assets/video/veteclicksi.mp4"
+
 const Uxui = () => {
     return (
         <section id="uxui" className="min-h-[100dvh] bg-gray-300 p-10 pt-18 montserrat flex flex-col items-center">
@@ -38,11 +40,15 @@ const Uxui = () => {
                         </p>
                     </div>
                     <img
-                        className="rounded-xl h-[300px] shadow-md shadow-gray-400"
+                        className="rounded-xl h-[300px] shadow-md shadow-gray-400 ov"
                         src={uikit}
                         alt="veteclick UI kit" />
 
                 </article>
+                <article className="overflow-hidden h-[387px] rounded-3xl relative">
+                    <video src={video} autoPlay loop muted className="scale-50 absolute top-[-225px]"></video>
+                </article>
+                
             </div>
         </section>
     );

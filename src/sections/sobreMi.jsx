@@ -4,8 +4,8 @@ import ExperienciaCard from "@/components/experienciaCard";
 import ItemFormacion from "@/components/itemFormacion";
 import ItemOtros from "@/components/itemOtros";
 import { motion } from "framer-motion";
-import { experiencia, formacion, otros } from "@/data/datosEsp";
-import { herramientas } from "@/data/datos";
+import { experiencia, formacion, otros, herramientas } from "@/data/datosSobreMi";
+import { useLanguage } from "@/context/langContext";
 
 const itemVariants = {
     hidden: {
@@ -41,10 +41,13 @@ const itemVariants2 = {
 }
 
 const SobreMI = () => {
+    const { language, toggleLanguage } = useLanguage();
+
     return (
         <section id="about" className="bg-gradient-to-tr from-gray-800 to-gray-900 flex flex-col items-center p-10 pt-18 montserrat">
             <div className="h-full w-full p-4 pt-6 max-w-[1440px]">
                 <Presentacion clase='mb-15' />
+                <button onClick={() => toggleLanguage()}>{language === 'es' ? 'Inglés' : 'Español'}</button>
                 <Subtitulo
                     texto='Experiencia'
                     clase='mb-10'
@@ -52,7 +55,7 @@ const SobreMI = () => {
                 
                 <div className="flex gap-3 justify-center w-full mb-15">
                     
-                    {experiencia.map((trabajo, index) => (
+                    {experiencia[language].map((trabajo, index) => (
                         <motion.div
                             key={trabajo.titulo}
                             custom={index * 0.20}
@@ -79,7 +82,7 @@ const SobreMI = () => {
                     clase='mb-10'
                 />
                 <div className="grid grid-cols-3 gap-4 w-full mb-15">
-                    {formacion.map((item, index) => (
+                    {formacion[language].map((item, index) => (
                         <motion.div
                             key={item.titulo}
                             custom={index * 0.20}
@@ -137,7 +140,7 @@ const SobreMI = () => {
                     texto='Otras habilidades'
                     clase='mb-10'
                 />
-                {otros.map(item => (
+                {otros[language].map(item => (
                     <ItemOtros
                         clase='mb-3'
                         titulo={item.titulo}
