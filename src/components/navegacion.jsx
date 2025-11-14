@@ -1,7 +1,10 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import { useLanguage } from "@/context/langContext";
 
 const Navegacion = ({ clase }) => {
+
+    const { language, toggleLanguage } = useLanguage();
 
     const { scrollY } = useScroll();
 
@@ -37,7 +40,7 @@ const Navegacion = ({ clase }) => {
 
     const simpleItems = [
         {
-            titulo: 'Sobre mí',
+            titulo: language === 'es' ? 'Sobre Mí' : 'About me',
             linkto: 'about'
         },
         {
@@ -45,11 +48,11 @@ const Navegacion = ({ clase }) => {
             linkto: 'fullstack'
         },
         {
-            titulo: 'Diseño UX/UI',
+            titulo: language === 'es' ? 'Diseño UX/UI' : 'UX/UI Design',
             linkto: 'uxui'
         },
         {
-            titulo: 'Contacto',
+            titulo: language === 'es' ? 'Contacto' : 'Contact',
             linkto: 'contacto'
         }
     ];

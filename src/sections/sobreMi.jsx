@@ -4,7 +4,7 @@ import ExperienciaCard from "@/components/experienciaCard";
 import ItemFormacion from "@/components/itemFormacion";
 import ItemOtros from "@/components/itemOtros";
 import { motion } from "framer-motion";
-import { experiencia, formacion, otros, herramientas } from "@/data/datosSobreMi";
+import { resumen, experiencia, formacion, otros, herramientas } from "@/data/datosSobreMi";
 import { useLanguage } from "@/context/langContext";
 
 const itemVariants = {
@@ -46,10 +46,13 @@ const SobreMI = () => {
     return (
         <section id="about" className="bg-gradient-to-tr from-gray-800 to-gray-900 flex flex-col items-center p-10 pt-18 montserrat">
             <div className="h-full w-full p-4 pt-6 max-w-[1440px]">
-                <Presentacion clase='mb-15' />
+                <Presentacion
+                    titulo={language === 'es' ? 'Sobre mí' : 'About me'}
+                    texto={language === 'es' ? resumen.es : resumen.en}
+                    clase='mb-15' />
                 <button onClick={() => toggleLanguage()}>{language === 'es' ? 'Inglés' : 'Español'}</button>
                 <Subtitulo
-                    texto='Experiencia'
+                    texto={language === 'es' ? 'Experiencia' : 'Working experience'}
                     clase='mb-10'
                 />
                 
@@ -78,7 +81,7 @@ const SobreMI = () => {
                 </div>
 
                 <Subtitulo
-                    texto='Formación'
+                    texto={language === 'es' ? 'Formación' : 'Education & training'}
                     clase='mb-10'
                 />
                 <div className="grid grid-cols-3 gap-4 w-full mb-15">
@@ -105,7 +108,7 @@ const SobreMI = () => {
                     )}
                 </div>
                 <Subtitulo
-                    texto='Herramientas utilizadas'
+                    texto={language === 'es' ? 'Herramientas utilizadas' : 'Work tools'}
                     clase='mb-10'
                 />
                 <div className="flex justify-between w-full mb-15">
@@ -137,7 +140,7 @@ const SobreMI = () => {
                     )}
                 </div>
                 <Subtitulo
-                    texto='Otras habilidades'
+                    texto={language === 'es' ? 'Otras habilidades' : 'Other skills'}
                     clase='mb-10'
                 />
                 {otros[language].map(item => (

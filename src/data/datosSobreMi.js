@@ -2,12 +2,11 @@ import logoUBA from '@/assets/img/formacion/UBA.png';
 import logoUTN from '@/assets/img/formacion/UTN.png';
 import logoEIT from '@/assets/img/formacion/EIT.png';
 
-export const presentacion = {
+export const resumen = {
     es: '¡Hola! Mi nombre es Valeria. Trabajo en proyectos independientes como desarrolladora Full-stack y estoy también interesada en el diseño UX/UI. Después de más de una década en investigación y docencia universitaria, decidí transitar hacia el área tech para combinar mis habilidades analíticas de resolución de problemas con el desarrollo creativo. Disfruto realizando páginas web y aplicaciones centradas en el usuario, con diseños atractivos y una clara identidad visual',
 
     en: "Hi! My name is Valeria. I'm working on independent projects as a Full-stack developer and I'm also interested in UX/UI design. After over a decade in research and university teaching, I decided to get into tech to combine my analytical problem-solving skills with creative development. I enjoy making user-centered websites and apps with attractive designs and a clear visual identity."
 }
-
 
 export const experiencia = {
     es:[{
@@ -55,7 +54,7 @@ export const experiencia = {
             ]
         },
         {
-            titulo: 'University Professor',
+            titulo: 'University Assistant Professor',
             periodo: '2009 - 2024',
             items: [
                 'Laboratory activities coordination',
@@ -118,6 +117,11 @@ export const otros = {
         certificado: 'https://cert.efset.org/fwxQLT'
     },
     {
+        titulo: 'Python avanzado',
+        descripcion: 'Educación IT',
+        certificado: 'https://www.educacionit.com/perfil/valeria-de-la-concepcion-maria-1033137/certificado/74428?_gl'
+    },
+    {
         titulo: 'Fundamentos de SCRUM',
         descripcion: 'Educación IT',
         certificado: 'https://www.educacionit.com/perfil/valeria-de-la-concepcion-maria-1033137/certificado/80170?_gl'
@@ -126,6 +130,11 @@ export const otros = {
         titulo: 'English',
         descripcion: 'Proficient C2',
         certificado: 'https://cert.efset.org/fwxQLT'
+    },
+    {
+        titulo: 'Advanced Python',
+        descripcion: 'IT Education',
+        certificado: 'https://www.educacionit.com/perfil/valeria-de-la-concepcion-maria-1033137/certificado/74428?_gl'
     },
     {
         titulo: 'SCRUM Fundamentals',
