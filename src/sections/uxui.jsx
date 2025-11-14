@@ -45,9 +45,10 @@ const Uxui = () => {
                         alt="veteclick UI kit" />
 
                 </article>
-                <article className="overflow-hidden h-[387px] rounded-3xl relative">
-                    <video src={video} autoPlay loop muted className="scale-50 absolute top-[-225px]"></video>
+                    <article className="overflow-hidden h-[363px] w-[210px] rounded-3xl relative ring-2 ring-black">
+                    <video src={video} autoPlay loop muted className="scale-117 absolute top-1/2 right-1/2 translate-x-[109px] -translate-y-[169px]" ></video>
                 </article>
+                
                 
             </div>
         </section>
