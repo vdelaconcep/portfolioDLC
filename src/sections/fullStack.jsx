@@ -2,9 +2,7 @@ import Subtitulo from "@/components/subtitulo";
 
 import portada from "@/assets/img/LN/la-nave.vercel.app_.png";
 import carrito from "@/assets/img/LN/la-nave.vercel.app_ (5).png";
-import login from "@/assets/img/LN/la-nave.vercel.app_ (6).png";
 import cards from "@/assets/img/LN/la-nave.vercel.app_ (4).png";
-import admin from "@/assets/img/LN/la-nave.vercel.app_ (8).png";
 import main from "@/assets/img/HAL/halmovies.onrender.com_catalog.png";
 import portadaMobile from "@/assets/img/HAL/halmovies.onrender.com_.png";
 import mainMobile from "@/assets/img/HAL/halmovies.onrender.com_ (1).png";
@@ -26,7 +24,7 @@ const FullStack = () => {
                 <article className="flex gap-7 my-10">
                     <div className="w-1/3">
                         <img
-                            className="rounded-xl shadow-md shadow-gray-400"
+                            className="rounded-xl shadow-md shadow-gray-400 ring-1 ring-gray-700"
                             src={portada}
                             alt="La Nave portada" />
                     </div>
@@ -45,7 +43,7 @@ const FullStack = () => {
                     </div>
                     <div className="w-1/3">
                         <img
-                            className="rounded-xl shadow-md shadow-gray-400"
+                            className="rounded-xl shadow-md shadow-gray-400 ring-1 ring-gray-700"
                             src={cards}
                             alt="La Nave cards" />
                     </div>
@@ -55,38 +53,9 @@ const FullStack = () => {
                 <article className="flex gap-7 my-10">
                     <div className="w-1/3">
                         <img
-                            className="rounded-xl shadow-md shadow-gray-400"
+                            className="rounded-xl shadow-md shadow-gray-400 ring-1 ring-gray-700"
                             src={carrito}
                             alt="La Nave carrito" />
-                    </div>
-                    
-                    <div className="w-2/3">
-                        <p className="text-white">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ullam corporis odit totam est reiciendis incidunt sed iure, ducimus beatae natus quas neque, consectetur aliquam doloribus repudiandae atque. Atque, unde.
-                        </p>
-                    </div>
-                </article>
-                <article className="flex gap-7 my-10">
-                    <div className="w-2/3">
-                        <p className="text-white">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ullam corporis odit totam est reiciendis incidunt sed iure, ducimus beatae natus quas neque, consectetur aliquam doloribus repudiandae atque. Atque, unde.
-                        </p>
-                    </div>
-                    <div className="w-1/3">
-                        <img
-                            className="rounded-xl shadow-md shadow-gray-400"
-                            src={login}
-                            alt="La Nave login" />
-                    </div>
-                    
-
-                </article>
-                <article className="flex gap-7 my-10">
-                    <div className="w-1/3">
-                        <img
-                            className="rounded-xl shadow-md shadow-gray-400"
-                            src={admin}
-                            alt="La Nave admin" />
                     </div>
                     
                     <div className="w-2/3">
@@ -103,7 +72,7 @@ const FullStack = () => {
                 <article className="flex gap-7 my-10 w-full">
                     <div className="w-1/2">
                         <img
-                            className="rounded-xl shadow-md shadow-gray-400"
+                            className="rounded-xl shadow-md shadow-gray-400 ring-1 ring-gray-700"
                             src={main}
                             alt="HAL main desktop" />
                     </div>
@@ -146,7 +115,7 @@ const FullStack = () => {
                 <article className="flex gap-7 my-10">
                     <div className="w-1/3">
                         <img
-                            className="rounded-xl shadow-md shadow-gray-400"
+                            className="rounded-xl shadow-md shadow-gray-400 ring-1 ring-gray-700"
                             src={mainDesktop}
                             alt="AAAL home desktop" />
                     </div>
