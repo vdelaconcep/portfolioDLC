@@ -41,7 +41,7 @@ const itemVariants2 = {
 }
 
 const SobreMI = () => {
-    const { language, toggleLanguage } = useLanguage();
+    const { language } = useLanguage();
 
     return (
         <section id="about" className="bg-gradient-to-tr from-gray-800 to-gray-900 flex flex-col items-center p-10 pt-18 montserrat">
@@ -50,7 +50,6 @@ const SobreMI = () => {
                     titulo={language === 'es' ? 'Sobre mí' : 'About me'}
                     texto={language === 'es' ? resumen.es : resumen.en}
                     clase='mb-15' />
-                <button onClick={() => toggleLanguage()}>{language === 'es' ? 'Inglés' : 'Español'}</button>
                 <Subtitulo
                     texto={language === 'es' ? 'Experiencia' : 'Working experience'}
                     clase='mb-10'

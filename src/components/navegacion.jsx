@@ -83,6 +83,10 @@ const Navegacion = ({ clase }) => {
                 borderBottom: useTransform(
                     opacidadBg,
                     (opacity) => `1px solid rgba(255, 255, 255, ${opacity * 0.1})`
+                ),
+                boxShadow: useTransform(
+                    opacidadBg,
+                    (opacity) => `0.5px 0px 0.5px rgba(255, 255, 255, ${opacity * 0.3})`
                 )
             }}>
             <ul className='list-none flex text-lg font-medium text-gray-400'>
