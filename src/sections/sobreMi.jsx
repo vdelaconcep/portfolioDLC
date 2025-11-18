@@ -60,7 +60,7 @@ const SobreMI = () => {
                     
                     {experiencia[language].map((trabajo, index) => (
                         <motion.div
-                            key={trabajo.titulo}
+                            key={`exp-${index}`}
                             custom={index * 0.20}
                             variants={itemVariants}
                             initial="hidden"
@@ -87,7 +87,7 @@ const SobreMI = () => {
                 <div className="grid grid-cols-3 gap-4 w-full mb-15">
                     {formacion[language].map((item, index) => (
                         <motion.div
-                            key={item.titulo}
+                            key={`form-${index}`}
                             custom={index * 0.20}
                             variants={itemVariants}
                             initial="hidden"

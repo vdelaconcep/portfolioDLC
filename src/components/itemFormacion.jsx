@@ -9,7 +9,7 @@ const ItemFormacion = ({imagen, titulo, institucion, sub, certificado}) => {
             </div>
             
             <div className="flex flex-col items-center">
-                <h1 className="font-bold">{titulo}</h1>
+                <h1 className="font-bold text-center">{titulo}</h1>
                 <h2>{institucion}</h2>
                 <h3 className={`text-sm text-[#8473FF] ${certificado ? 'hover:underline' : ''}`}>{certificado ?
                     <a href={certificado}>{sub}</a> :

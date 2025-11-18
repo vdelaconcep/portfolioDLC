@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import BotonIdioma from '@/components/botonIdioma';
 import { useLanguage } from "@/context/langContext";
 
 const Navegacion = ({ clase }) => {
@@ -94,6 +95,7 @@ const Navegacion = ({ clase }) => {
                     </li>
                 )}
             </ul>
+            <BotonIdioma clase='absolute right-10 bottom-1/2 translate-y-1/2'/>
         </motion.nav>
     );
 };
