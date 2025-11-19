@@ -19,7 +19,8 @@ const LaNave = ({ clase }) => {
                 
                 <div className="w-2/3">
                     <p className="text-white mb-15">
-                        E-commerce especializado en indumentaria y accesorios con temática de rock nacional argentino. Plataforma desarrollada como trabajo integrador del bootcamp Full-Stack de Educación IT. Funcionalidades avanzadas de gestión comercial y experiencia de usuario optimizada.
+                        {language === 'es' ? 'E-commerce especializado en indumentaria y accesorios con temática de rock nacional argentino. Plataforma desarrollada como trabajo integrador del bootcamp Full-Stack de Educación IT. Funcionalidades avanzadas de gestión comercial y experiencia de usuario optimizada.'
+                        : "E-commerce specialized in clothes and accessories with Argentine rock music theme. Platform developed as the final project for Educación IT's Full-Stack bootcamp. Advanced commercial management features and optimized user experience."}
                     </p>
                     <div className="flex flex-col items-center">
                         <div>
@@ -50,12 +51,18 @@ const LaNave = ({ clase }) => {
             <article className="flex gap-7 my-20">
                 <div className="w-2/3">
                     <p className="text-white">
-                        Identidad visual de sitio alineada con la temática
+                        {language === 'es' ? `Identidad visual de sitio alineada con la temática
                         Empleo de animaciones y carousel
                         UI intuitiva para mejor experiencia de compra
                         Diseño responsive para todos los dispositivos
                         Sistema de gestión de productos con talles
-                        Visualización de precios con descuentos en tarjetas de producto
+                        Visualización de precios con descuentos en tarjetas de producto` : 
+                        `Visual identity that captures the rock aesthetic
+                        Animations and carousels
+                        Intuitive UI for enhaced shoping experience
+                        Responsive design for all devices
+                        Product managment sistems with sizes
+                        Price display with discounts on product cards`}
                     </p>
                 </div>
                 <div className="w-1/3">
@@ -77,7 +84,14 @@ const LaNave = ({ clase }) => {
                 
                 <div className="w-2/3">
                     <p className="text-white">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ullam corporis odit totam est reiciendis incidunt sed iure, ducimus beatae natus quas neque, consectetur aliquam doloribus repudiandae atque. Atque, unde.
+                        {language === 'es' ? `Cálculo automático del total con descuentos
+                        Cálculo de costos de envío según la zona geográfica
+                        Envío automático de e-mail de confirmación de compra
+                        Panel de administrador para gestión de precios, stock y compras realizadas, con servicio de mensajería` :
+                        `Automatic total calculation with discounts
+                        Shipping cost calculation based on geographic zone
+                        Automatic purchase confirmation email
+                        Admin panel for managing prices, inventory, and completed purchases, with messaging service`}
                     </p>
                 </div>
             </article>
