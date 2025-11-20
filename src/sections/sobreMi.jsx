@@ -144,7 +144,7 @@ const SobreMI = () => {
                 />
                 {otros[language].map(item => (
                     <ItemOtros
-                        clase='mb-3'
+                        clase='mb-3 text-white'
                         titulo={item.titulo}
                         descripcion={item.descripcion}
                         certificado={item.certificado} />
