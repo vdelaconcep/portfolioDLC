@@ -132,7 +132,7 @@ const LaNave = ({ clase }) => {
                 <div className="absolute bottom-0 right-0">
                     <BotonLink
                         enlace='https://la-nave.vercel.app/'
-                        color='white'/>
+                        color='gray-200'/>
                 </div>
             </article>
         </div>
