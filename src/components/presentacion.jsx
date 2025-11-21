@@ -7,7 +7,7 @@ const Presentacion = ({titulo, texto, clase}) => {
             </div>
             <div className="px-4 w-[600px] flex flex-col h-full justify-between">
                 <h1 className="text-5xl comfortaa font-extrabold text-white text-shadow-md text-shadow-gray-900 mb-4">{titulo}</h1>
-                <p className=" text-[#b86dbf] mt-auto">
+                <p className=" text-[#b86dbf]">
                     {texto}
                 </p>
             </div>
