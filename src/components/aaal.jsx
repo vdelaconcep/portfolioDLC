@@ -11,7 +11,7 @@ const Aaal = ({ clase }) => {
 
     return (
         <div className={clase && clase}>
-            <article className="flex gap-7 my-10">
+            <article className="flex gap-7 mb-15 items-center">
                 <div
                     className="w-1/3 rounded-xl shadow-md shadow-gray-400 ring-1 ring-gray-700 bg-cover bg-center overflow-hidden group relative">
                     <a
@@ -31,8 +31,8 @@ const Aaal = ({ clase }) => {
 
                 <div className="w-2/3">
                     <p className="text-gray-200 mb-15">
-                        {language === 'es' ? 'E-commerce especializado en indumentaria y accesorios con temática de rock nacional argentino. Plataforma desarrollada como trabajo integrador del bootcamp Full-Stack de Educación IT. Funcionalidades avanzadas de gestión comercial y experiencia de usuario optimizada.'
-                            : "E-commerce specialized in clothes and accessories with Argentine rock music theme. Platform developed as the final project for Educación IT's Full-Stack bootcamp. Advanced commercial management features and optimized user experience."}
+                        {language === 'es' ? 'Sitio web institucional del Club Asociación de Automóviles Antiguos de Lanús que incluye novedades, historia, eventos, avisos clasificados, galería de fotos y catálogo de automóviles.'
+                            : "Institutional website for the Club Asociación de Automóviles Antiguos de Lanús featuring news, history, events, classified ads, photo gallery, and car catalog."}
                     </p>
                     <div className="flex flex-col items-center text-gray-200">
                         <div>
@@ -61,30 +61,28 @@ const Aaal = ({ clase }) => {
                 </div>
             </article>
 
-            <article className="flex gap-7 my-10 w-full">
-                <div className="w-1/2">
+            <article className="flex gap-7 mt-10 w-full">
+                <div className="w-1/2 flex flex-col justify-between">
                     <ul className="text-gray-200">
                         {language === 'es' ?
                             <>
-                                <li className="mb-5"><b>Identidad visual</b> de sitio alineada con la temática</li>
-                                <li className="mb-5">Empleo de <b>animaciones y carousel</b></li>
-                                <li className="mb-5"><b>UI intuitiva</b> para mejor experiencia de compra</li>
-                                <li className="mb-5"><b>Diseño responsive</b> para todos los dispositivos</li>
-                                <li className="mb-5">Sistema de gestión de <b>productos con talles</b></li>
-                                <li className="mb-5">Visualización de <b>precios con descuentos</b> en tarjetas de producto</li>
+                                <li className="mb-5"><b>Diseño visual</b> con marcada identidad institucional</li>
+                                <li className="mb-5">Implementación de <b>animaciones con Framer-motion</b></li>
+                                <li className="mb-5"><b>Panel de administración</b> para gestión autónoma de contenido</li>
+                                <li className="mb-5"><b>Filtros</b> en galería de fotos y catálogo de automóviles</li>
+                                <li className="mb-5"><b>Interfaz intuitiva</b> facilita interacción con la comunidad</li>
                             </>
                             : <>
-                                <li className="mb-5"><b>Visual identity</b> that captures the rock aesthetic</li>
-                                <li className="mb-5"><b>Animations and carousels</b></li>
-                                <li className="mb-5"><b>Intuitive UI</b> for enhaced shoping experience</li>
-                                <li className="mb-5"><b>Responsive design</b> for all devices</li>
-                                <li className="mb-5">Product managment sistems with <b>sizes</b></li>
-                                <li className="mb-5">Price display with <b>discounts</b> on product cards</li>
+                                <li className="mb-5"><b>Visual design</b> with strong institutional identity</li>
+                                <li className="mb-5">Implementation of <b>animations with Framer Motion</b></li>
+                                <li className="mb-5"><b>Admin panel</b> for autonomous content management</li>
+                                <li className="mb-5"><b>Filters</b> in photo gallery and car catalog</li>
+                                <li className="mb-5"><b>Intuitive interface</b> that facilitates interaction with community</li>
                             </>
                         }
 
                     </ul>
-                    <article className="flex justify-center">
+                    <article className="flex justify-end mx-10 mt-auto">
                         <BotonLink
                             enlace='https://aaal-beta.vercel.app/'
                             color='gray-200' />

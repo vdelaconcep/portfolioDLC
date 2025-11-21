@@ -50,8 +50,8 @@ const HalMovies = ({ clase }) => {
                 </div>
         
             </article>
-            <article className="flex gap-7 mt-20 w-full items-center">
-                <div className="w-1/2">
+            <article className="flex gap-7 my-15 w-full">
+                <div className="w-1/2 flex flex-col justify-between">
                     <ul className="text-gray-200">
                         {language === 'es' ?
                             <>
@@ -70,7 +70,7 @@ const HalMovies = ({ clase }) => {
                             </>
                         }
                     </ul>
-                    <article className="flex justify-center">
+                    <article className="flex justify-end mx-10 mt-auto">
                         <BotonLink
                             enlace='https://halmovies.onrender.com/'
                             color='gray-200'/>

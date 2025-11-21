@@ -60,14 +60,13 @@ const LaNave = ({ clase }) => {
                     </div>
                 </div>
             </article>
-            <article className="flex gap-7 my-20 items-center">
+            <article className="flex gap-7 my-15 items-center">
                 <div className="w-1/3">
                     <ul className="text-gray-200">
                         {language === 'es' ? 
                             <>
                                 <li className="mb-5"><b>Identidad visual</b> de sitio alineada con la temática</li>
                                 <li className="mb-5">Empleo de <b>animaciones y carousel</b></li>
-                                <li className="mb-5"><b>UI intuitiva</b> para mejor experiencia de compra</li>
                                 <li className="mb-5"><b>Diseño responsive</b> para todos los dispositivos</li>
                                 <li className="mb-5">Sistema de gestión de <b>productos con talles</b></li>
                                 <li className="mb-5">Visualización de <b>precios con descuentos</b> en tarjetas de producto</li>
@@ -75,7 +74,6 @@ const LaNave = ({ clase }) => {
                             : <>
                                 <li className="mb-5"><b>Visual identity</b> that captures the rock aesthetic</li>
                                 <li className="mb-5"><b>Animations and carousels</b></li>
-                                <li className="mb-5"><b>Intuitive UI</b> for enhaced shoping experience</li>
                                 <li className="mb-5"><b>Responsive design</b> for all devices</li>
                                 <li className="mb-5">Product managment sistems with <b>sizes</b></li>
                                 <li className="mb-5">Price display with <b>discounts</b> on product cards</li>
@@ -103,7 +101,7 @@ const LaNave = ({ clase }) => {
                 
             
             </article>
-            <article className="flex gap-7 items-center relative">
+            <article className="flex gap-7">
                 <div className="w-1/3">
                     <img
                         className="rounded-xl shadow-md shadow-gray-400 ring-1 ring-gray-700"
@@ -111,7 +109,7 @@ const LaNave = ({ clase }) => {
                         alt="La Nave carrito" />
                 </div>
                 
-                <div className="w-2/3 relative">
+                <div className="w-2/3 flex flex-col justify-between">
                     <ul className="text-gray-200">
                     {language === 'es' ? 
                         <>
@@ -128,11 +126,12 @@ const LaNave = ({ clase }) => {
                         </>
                     }
                     </ul>
-                </div>
-                <div className="absolute bottom-0 right-0">
+                
+                    <div className="flex justify-end mx-10 mt-auto">
                     <BotonLink
                         enlace='https://la-nave.vercel.app/'
                         color='gray-200'/>
+                    </div>
                 </div>
             </article>
         </div>

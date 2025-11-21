@@ -1,13 +1,13 @@
 
 const Presentacion = ({titulo, texto, clase}) => {
     return (
-        <article className={`flex justify-center items-center gap-7 ${clase && clase}`}>
+        <article className={`flex justify-center items-end gap-7 ${clase && clase}`}>
             <div className="h-0 w-0 border-b-[180px] border-b-pink-500 border-l-[120px] border-l-transparent border-r-[120px] border-r-transparent">
 
             </div>
-            <div className="px-4 w-[600px] flex flex-col h-full justify-center">
+            <div className="px-4 w-[600px] flex flex-col h-full justify-between">
                 <h1 className="text-5xl comfortaa font-extrabold text-white text-shadow-md text-shadow-gray-900 mb-4">{titulo}</h1>
-                <p className=" text-[#b86dbf]">
+                <p className=" text-[#b86dbf] mt-auto">
                     {texto}
                 </p>
             </div>

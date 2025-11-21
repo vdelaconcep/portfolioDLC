@@ -27,7 +27,7 @@ const Home = () => {
                         {language === 'es' ? 'Diseño UX/UI' : 'UX/UI Design'}</motion.h1>
                 </article>
 
-                <article className='text-gray-300 text-center text-xl font-normal flex justify-center montserrat mt-25 absolute bottom-25 left-1/2 -translate-x-1/2'>
+                <article className='text-gray-300 text-center text-xl font-normal flex justify-center montserrat mt-25 absolute bottom-20 left-1/2 -translate-x-1/2 w-full'>
                     <h1 className='text-[#c005d1]'>{language === 'es' && 'Portfolio de'} <b className='text-white'>Valeria de la Concepción María</b> {language === 'en' && 'Portfolio'} </h1>
                 </article>
             </div>

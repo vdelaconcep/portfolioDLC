@@ -29,7 +29,7 @@ const FullStack = () => {
                     texto={language === 'es' ? 'Proyecto en desarrollo' : 'Work in progress'}
                     clase='mt-20 mb-10' />
 
-                <Aaal />
+                <Aaal clase='mb-10'/>
             </div>
 
         </section>
