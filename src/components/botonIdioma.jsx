@@ -8,14 +8,16 @@ const BotonIdioma = ({ clase }) => {
             <button
                 className={`mr-1 ${language === 'es' ? 'text-gray-700' : 'cursor-pointer'}`}
                 onClick={toggleLanguage}
-                disabled={language === 'es'}>
+                disabled={language === 'es'}
+                title={language === 'en' && 'Cambiar idioma'}>
                 ESP
             </button>
             <span className="text-gray-400">|</span>
             <button
                 className={`ml-1 ${language === 'en' ? 'text-gray-700' : 'cursor-pointer'}`}
                 onClick={toggleLanguage}
-                disabled={language === 'en'}>
+                disabled={language === 'en'}
+                title={language === 'es' && 'Toggle language'}>
                 ENG
             </button>
             

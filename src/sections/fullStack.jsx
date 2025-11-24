@@ -12,7 +12,7 @@ const FullStack = () => {
     return (
         <section id="fullstack" className="min-h-[100dvh] bg-gradient-to-tr from-[#1f1239] to-black p-10 pt-18 montserrat flex flex-col items-center">
             <h1 className="text-5xl font-bold text-white text-shadow-md text-shadow-gray-900 my-4 text-center comfortaa">{language === 'es' ? 'Proyectos Full-Stack' : 'Full-Stack Projects'}</h1>
-            <div className="max-w-[1440px]">
+            <div className="max-w-[1440px] h-full w-full px-4">
                 <Subtitulo
                     texto={language === 'es' ? 'Tienda de ropa online' : 'Online clothing store'}
                     clase='my-10' />
