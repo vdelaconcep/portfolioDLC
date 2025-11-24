@@ -59,14 +59,14 @@ const HalMovies = ({ clase }) => {
                                 <li className="mb-5">Paginación dinámica con <b>scroll infinito</b></li>
                                 <li className="mb-5"><b>Filtrado</b> por género</li>
                                 <li className="mb-5"><b>Búsqueda</b> de películas por título</li>
-                                <li className="mb-5"><b>Diseño responsive</b> mobile first</li>
+                                <li><b>Diseño responsive</b> mobile first</li>
                             </>
                             : <>
                                 <li className="mb-5">Visual design inspired by the movie "2001: A Space Odyssey"</li>
                                 <li className="mb-5">Dynamic pagination with <b>infinite scroll</b></li>
                                 <li className="mb-5"><b>Filtering</b> by genre</li>
                                 <li className="mb-5"><b>Search</b> movies by title</li>
-                                <li className="mb-5">Mobile-first <b>responsive design</b></li>
+                                <li>Mobile-first <b>responsive design</b></li>
                             </>
                         }
                     </ul>

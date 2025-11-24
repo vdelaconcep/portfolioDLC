@@ -30,7 +30,7 @@ const Aaal = ({ clase }) => {
                 </div>
 
                 <div className="w-2/3">
-                    <p className="text-gray-200 mb-15">
+                    <p className="text-gray-200 mb-7">
                         {language === 'es' ? 'Sitio web institucional del Club Asociación de Automóviles Antiguos de Lanús que incluye novedades, historia, eventos, avisos clasificados, galería de fotos y catálogo de automóviles.'
                             : "Institutional website for the Club Asociación de Automóviles Antiguos de Lanús featuring news, history, events, classified ads, photo gallery, and car catalog."}
                     </p>

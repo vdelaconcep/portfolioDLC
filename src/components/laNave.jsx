@@ -30,7 +30,7 @@ const LaNave = ({ clase }) => {
                 </div>
                 
                 <div className="w-2/3">
-                    <p className="text-gray-200 mb-15">
+                    <p className="text-gray-200 mb-6">
                         {language === 'es' ? 'E-commerce especializado en indumentaria y accesorios con temática de rock nacional argentino. Plataforma desarrollada como trabajo integrador del bootcamp Full-Stack de Educación IT. Funcionalidades avanzadas de gestión comercial y experiencia de usuario optimizada.'
                         : "E-commerce specialized in clothes and accessories with Argentine rock music theme. Platform developed as the final project for Educación IT's Full-Stack bootcamp. Advanced commercial management features and optimized user experience."}
                     </p>
@@ -61,7 +61,7 @@ const LaNave = ({ clase }) => {
                 </div>
             </article>
             <article className="flex gap-7 my-15 items-center">
-                <div className="w-1/3">
+                <div className="w-1/3 flex items-center">
                     <ul className="text-gray-200">
                         {language === 'es' ? 
                             <>
@@ -69,20 +69,20 @@ const LaNave = ({ clase }) => {
                                 <li className="mb-5">Empleo de <b>animaciones y carousel</b></li>
                                 <li className="mb-5"><b>Diseño responsive</b> para todos los dispositivos</li>
                                 <li className="mb-5">Sistema de gestión de <b>productos con talles</b></li>
-                                <li className="mb-5">Visualización de <b>precios con descuentos</b> en tarjetas de producto</li>
+                                <li>Visualización de <b>precios con descuentos</b> en tarjetas de producto</li>
                             </>    
                             : <>
                                 <li className="mb-5"><b>Visual identity</b> that captures the rock aesthetic</li>
                                 <li className="mb-5"><b>Animations and carousels</b></li>
                                 <li className="mb-5"><b>Responsive design</b> for all devices</li>
                                 <li className="mb-5">Product managment sistems with <b>sizes</b></li>
-                                <li className="mb-5">Price display with <b>discounts</b> on product cards</li>
+                                <li>Price display with <b>discounts</b> on product cards</li>
                             </>
                         }
                         
                     </ul>
                 </div>
-                <div className="w-2/3 flex gap-4">
+                <div className="w-2/3 flex items-center gap-4">
                     <div className="flex-shrink min-w-0">
                         <img
                             className="flex-none h-auto max-w-full object-contain rounded-xl shadow-md shadow-gray-400 ring-1 ring-gray-700"
@@ -116,13 +116,13 @@ const LaNave = ({ clase }) => {
                                 <li className="mb-5"><b>Cálculo automático del total</b> con descuentos</li>
                                 <li className="mb-5"><b>Cálculo de costos de envío</b> según la zona geográfica</li>
                                 <li className="mb-5">Envío automático de <b>e-mail de confirmación de compra</b></li>
-                                <li className="mb-5"><b>Panel de administrador</b> para gestión de precios, stock y compras realizadas, con servicio de mensajería</li>
+                                <li><b>Panel de administrador</b> para gestión de precios, stock y compras realizadas, con servicio de mensajería</li>
                         </> :
                         <>
                                 <li className="mb-5"><b>Automatic total calculation</b> with discounts</li>
                                 <li className="mb-5"><b>Shipping cost calculation</b> based on geographic zone</li>
                                 <li className="mb-5">Automatic <b>purchase confirmation email</b></li>
-                                <li className="mb-5"><b>Admin panel</b> for managing prices, inventory, and completed purchases, with messaging service</li>
+                                <li><b>Admin panel</b> for managing prices, inventory, and completed purchases, with messaging service</li>
                         </>
                     }
                     </ul>

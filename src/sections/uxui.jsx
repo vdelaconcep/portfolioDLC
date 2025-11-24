@@ -1,9 +1,8 @@
 import Subtitulo from "@/components/subtitulo";
 import ItemOtros from "@/components/itemOtros";
+import BotonLink from "@/components/botonLink";
 
 import mockup from "@/assets/img/veteclick/mockup.jpg";
-import prototipo from "@/assets/img/veteclick/prototipo.jpg";
-import uikit from "@/assets/img/veteclick/UIkit.jpg";
 
 import video from "@/assets/video/veteclicksi.mp4";
 
@@ -20,24 +19,9 @@ const Uxui = () => {
                     texto={language === 'es' ? 'App veterinaria' : 'Veterinary app'}
                     clase='my-10' />
 
-                <article className="flex gap-7 my-10 w-full items-center">
-                    <div
-                        className="w-1/3 aspect-[688/836] rounded-xl shadow-md shadow-gray-800 bg-cover bg-center overflow-hidden group relative">
-                        <a
-                            className="block"
-                            href="https://www.figma.com/design/VjjO2uZo4a5xFHAkgdUpVJ/Equipo-11---veteClick---wireframes?node-id=0-1&t=OBKQjiLyTZIUSveC-1"
-                            target="_blank">
-                            <img
-                                className="w-full h-full object-cover transition-all duration-200 group-hover:blur-sm group-hover:scale-105"
-                                src={mockup}
-                                alt="Veteclick mockup" />
-                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-200"></div>
-                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 text-white text-xl font-semibold transition-all duration-200">
-                                {language === 'es' ? 'Ir a Figma' : 'Go to Figma'}<i className="fa-solid fa-arrow-up-right-from-square ml-2"></i>
-                            </div>
-                        </a>
-                    </div>
-                    <div className="w-full">
+                <div className="flex gap-7 my-10 w-full items-center">
+                    
+                    <article className="w-full">
                         <p className="text-black">
                             {language === 'es' ?
                                 'Aplicación de atención veterinaria online como proyecto final de la diplomatura en desarrollo UX/UI de la UTN. Incluye investigación y diseño centrado en el usuario, además del desarrollo del ‘happy path’ de la interfaz en Figma.' :
@@ -59,38 +43,82 @@ const Uxui = () => {
                                 <ItemOtros
                                     clase='mb-4'
                                     titulo={language === 'es' ? 'Prototipos' : 'Prototypes'}
-                                    descripcion='En alta, media y baja definición / Pruebas de usabilidad' />
+                                    descripcion={language === 'es' ? 'En alta, media y baja definición / Pruebas de usabilidad' : 'Low-, mid-, and high-fi prototypes + usability testing'} />
 
                                 <ItemOtros
                                     clase='mb-4'
-                                    titulo='UI kit' />
+                                    titulo='UI kit'
+                                    link='#'
+                                    linkName={language === 'es' ? 'Ver UI Kit en Figma' : 'Go to UI Kit in Figma'} />
                             </div>
 
                         </div>
-                    </div>
+                    </article>
+                    <article
+                        className="w-1/3 aspect-[688/836] rounded-xl shadow-md shadow-gray-800 bg-cover bg-center overflow-hidden group relative">
+                        <a
+                            className="block"
+                            href="https://www.figma.com/design/VjjO2uZo4a5xFHAkgdUpVJ/Equipo-11---veteClick---wireframes?node-id=0-1&t=OBKQjiLyTZIUSveC-1"
+                            target="_blank">
+                            <img
+                                className="w-full h-full object-cover transition-all duration-200 group-hover:blur-sm group-hover:scale-105"
+                                src={mockup}
+                                alt="Veteclick mockup" />
+                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-200"></div>
+                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 text-white text-xl font-semibold transition-all duration-200 p-5">
+                                <span>{language === 'es' ? 'Ver wireframes en Figma' : 'See wireframes in Figma'}<i className="fa-solid fa-arrow-up-right-from-square ml-2"></i></span>
 
-                </article>
+                            </div>
+                        </a>
+                    </article>
 
-                <img
-                    className="rounded-xl w-full shadow-md shadow-gray-800 my-10"
-                    src={prototipo}
-                    alt="veteclick prototipo" />
+                </div>
 
-                <article className="flex gap-7 my-10">
-                    <div className="w-full">
-                        <p className="text-black">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ullam corporis odit totam est reiciendis incidunt sed iure, ducimus beatae natus quas neque, consectetur aliquam doloribus repudiandae atque. Atque, unde.
-                        </p>
-                    </div>
-                    <img
-                        className="rounded-xl h-[300px] shadow-md shadow-gray-400 ov"
-                        src={uikit}
-                        alt="veteclick UI kit" />
-
-                </article>
+                <div className="flex gap-7 my-10">
                     <article className="overflow-hidden h-[363px] w-[210px] rounded-3xl relative ring-2 ring-black">
-                    <video src={video} autoPlay loop muted className="scale-117 absolute top-1/2 right-1/2 translate-x-[109px] -translate-y-[169px]" ></video>
-                </article>
+                        <video src={video} autoPlay loop muted className="scale-117 absolute top-1/2 right-1/2 translate-x-[109px] -translate-y-[169px]" ></video>
+                    </article>
+                    <div className="flex-1 w-full flex flex-col justify-between">
+                    <ul>
+                        {language === 'es' ?
+                            <>
+                                <li className="mb-5"><b>Aplicación de grillas</b> para garantizar la consistencia visual</li>
+                                <li className="mb-5"><b>Elección de paleta de colores</b> de acuerdo a la temática de la app, aplicando reglas de diseño</li>
+                                <li className="mb-5"><b>Empleo de bibliotecas de la comunidad de Figma</b> para íconos y algunos componentes</li>
+                                <li className="mb-5">Diseño de componentes con <b>empleo de variables en Figma</b></li>
+                                <li className="mb-5">Testeo de pantallas principales con <b>usuarios reales</b> para identificar y corregir problemas</li>
+                            </>
+                            : <>
+                                <li className="mb-5"><b>Grid system implementation</b> to ensure visual consistency</li>
+                                <li className="mb-5"><b>Color palette selection</b> according to the app's theme, applying design principles</li>
+                                <li className="mb-5"><b>Use of Figma Community libraries</b> for icons and some components</li>
+                                <li className="mb-5">Component design with <b>Figma variables implementation</b></li>
+                                <li className="mb-5">Testing of main screens with <b>real users</b> to identify and fix issues</li>
+                            </>
+                        }
+
+                        </ul>
+                        <article className="flex gap-5 justify-end mt-auto">
+                            <BotonLink
+                                enlace='https://www.figma.com/design/VjjO2uZo4a5xFHAkgdUpVJ/Equipo-11---veteClick---wireframes?node-id=0-1&t=OBKQjiLyTZIUSveC-1'
+                                color='gray-800'
+                                texto={{
+                                    es: 'Ver wireframes',
+                                    en: 'Wireframes'
+                                }} />
+                            <BotonLink
+                                enlace='https://www.figma.com/proto/VjjO2uZo4a5xFHAkgdUpVJ/Equipo-11---veteClick---wireframes?node-id=1-1250&t=sxMmiInhuReBR6pq-1'
+                                color='gray-800'
+                                texto={{
+                                    es: 'Ver prototipo',
+                                    en: 'Prototype'
+                                }}/>
+                        </article>
+
+                    </div>
+                    
+                </div>
+                
                 
                 
             </div>
