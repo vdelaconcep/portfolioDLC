@@ -48,17 +48,17 @@ const Uxui = () => {
                             <div>
                                 <ItemOtros
                                     clase='mb-4'
-                                    titulo='Investigación'
-                                    descripcion='Benchmarking, mapa de empatía, entrevistas y POV' />
+                                    titulo={language === 'es' ? 'Investigación' : 'Research'}
+                                    descripcion={language === 'es' ? 'Benchmarking, mapa de empatía, entrevistas y POV' : 'Benchmark, empathy map, interviews and POV'} />
 
                                 <ItemOtros
                                     clase='mb-4'
-                                    titulo='Arquitectura de la app'
-                                    descripcion='Cardsorting, mapa del sitio, wireframes' />
+                                    titulo={language === 'es' ? 'Arquitectura de la app' : 'App architecture'}
+                                    descripcion={language === 'es' ? 'Cardsorting, mapa del sitio, wireframes' : 'Cardsorting, site map, wireframes'} />
 
                                 <ItemOtros
                                     clase='mb-4'
-                                    titulo={language === 'es' ? 'Prototipos' : 'Database'}
+                                    titulo={language === 'es' ? 'Prototipos' : 'Prototypes'}
                                     descripcion='En alta, media y baja definición / Pruebas de usabilidad' />
 
                                 <ItemOtros
