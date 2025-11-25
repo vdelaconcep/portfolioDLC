@@ -123,9 +123,6 @@ const Uxui = () => {
                     </div>
                     
                 </div>
-                
-                
-                
             </div>
         </section>
     );
