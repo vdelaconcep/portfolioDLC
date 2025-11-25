@@ -5,6 +5,8 @@ import admin from "@/assets/img/LN/la-nave.vercel.app_ (6).png"
 import ItemOtros from "@/components/itemOtros";
 import BotonLink from "@/components/botonLink";
 import { useLanguage } from "@/context/langContext";
+import { motion } from "framer-motion";
+import { fadeInUp } from "@/constants/animations";
 
 const LaNave = ({ clase }) => {
     const { language } = useLanguage();
@@ -12,7 +14,8 @@ const LaNave = ({ clase }) => {
     return (
         <div className={`max-w-full ${clase && clase}`}>
             <article className="flex gap-7 items-center">
-                <div
+                <motion.div
+                    {...fadeInUp}
                     className="w-1/3 rounded-xl shadow-md shadow-gray-400 ring-1 ring-gray-700 bg-cover bg-center overflow-hidden group relative">
                     <a
                         className="block"
@@ -27,7 +30,7 @@ const LaNave = ({ clase }) => {
                             {language === 'es' ? 'Visitar sitio' : 'Visit website'}<i className="fa-solid fa-arrow-up-right-from-square ml-2"></i>
                         </div>
                     </a>
-                </div>
+                </motion.div>
                 
                 <div className="w-2/3">
                     <p className="text-gray-200 mb-6">
@@ -82,7 +85,9 @@ const LaNave = ({ clase }) => {
                         
                     </ul>
                 </div>
-                <div className="w-2/3 flex items-center gap-4">
+                <motion.div
+                    {...fadeInUp}
+                    className="w-2/3 flex items-center gap-4">
                     <div className="flex-shrink min-w-0">
                         <img
                             className="flex-none h-auto max-w-full object-contain rounded-xl shadow-md shadow-gray-400 ring-1 ring-gray-700"
@@ -97,17 +102,19 @@ const LaNave = ({ clase }) => {
                     </div>    
                         
                     
-                </div>
+                </motion.div>
                 
             
             </article>
             <article className="flex gap-7">
-                <div className="w-1/3">
+                <motion.div
+                    {...fadeInUp}
+                    className="w-1/3">
                     <img
                         className="rounded-xl shadow-md shadow-gray-400 ring-1 ring-gray-700"
                         src={admin}
-                        alt="La Nave carrito" />
-                </div>
+                        alt="La Nave panel administrador" />
+                </motion.div>
                 
                 <div className="w-2/3 flex flex-col justify-between">
                     <ul className="text-gray-200">

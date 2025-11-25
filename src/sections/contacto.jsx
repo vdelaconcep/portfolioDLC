@@ -1,6 +1,8 @@
+import { motion } from "framer-motion";
 import BotonContacto from "@/components/botonContacto";
 import { contacto } from "@/data/datosContacto";
 import { useLanguage } from '@/context/langContext';
+import { wavy } from '@/constants/animations';
 
 const Contacto = () => {
     const { language } = useLanguage();
@@ -14,7 +16,7 @@ const Contacto = () => {
                 }
             </h1>
 
-            <div className="flex flex-col justify-center flex-1 items-center max-w-[600px]">
+            <div className="flex flex-col items-center max-w-[600px] mt-20">
 
                 <h4 className="text-[#b86dbf] mb-5 text-center">
                     {language === 'es' ?
@@ -24,13 +26,18 @@ const Contacto = () => {
                 </h4>
                 <div className="flex justify-between w-full">
                     {contacto.map((item, index) =>
-                        <BotonContacto
+                        <motion.div
                             key={`botonContacto-${index}`}
+                            {...wavy(index)}
+                        >
+                        <BotonContacto
+                            
                             contacto={item.contacto}
                             color={item.color || null}
                             link={item.link}
                             title={language === 'es' ? item.title.es : item.title.en}
-                        />
+                            />
+                        </motion.div>
                     )
                     }
                 </div>

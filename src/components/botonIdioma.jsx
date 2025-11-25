@@ -9,7 +9,7 @@ const BotonIdioma = ({ clase }) => {
                 className={`mr-1 ${language === 'es' ? 'text-gray-700' : 'cursor-pointer'}`}
                 onClick={toggleLanguage}
                 disabled={language === 'es'}
-                title={language === 'en' && 'Cambiar idioma'}>
+                title={language === 'en' ? 'Cambiar idioma' : undefined}>
                 ESP
             </button>
             <span className="text-gray-400">|</span>
@@ -17,7 +17,7 @@ const BotonIdioma = ({ clase }) => {
                 className={`ml-1 ${language === 'en' ? 'text-gray-700' : 'cursor-pointer'}`}
                 onClick={toggleLanguage}
                 disabled={language === 'en'}
-                title={language === 'es' && 'Toggle language'}>
+                title={language === 'es' ? 'Toggle language' : undefined}>
                 ENG
             </button>
             

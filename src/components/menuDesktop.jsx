@@ -1,11 +1,13 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import { itemsNavegacion } from '@/data/itemsNavegacion';
+import { scrollToSection } from '@/utils/scrollToSection';
 import BotonIdioma from '@/components/botonIdioma';
 import { useLanguage } from "@/context/langContext";
 
-const Navegacion = ({ clase }) => {
+const MenuDesktop = ({ clase }) => {
 
-    const { language, toggleLanguage } = useLanguage();
+    const { language } = useLanguage();
 
     const { scrollY } = useScroll();
 
@@ -39,32 +41,6 @@ const Navegacion = ({ clase }) => {
         [0, 1]
     );
 
-    const simpleItems = [
-        {
-            titulo: language === 'es' ? 'Sobre Mí' : 'About me',
-            linkto: 'about'
-        },
-        {
-            titulo: 'FullStack',
-            linkto: 'fullstack'
-        },
-        {
-            titulo: language === 'es' ? 'Diseño UX/UI' : 'UX/UI Design',
-            linkto: 'uxui'
-        },
-        {
-            titulo: language === 'es' ? 'Contacto' : 'Contact',
-            linkto: 'contacto'
-        }
-    ];
-
-    const scrollToSection = (sectionId) => {
-        document.getElementById(sectionId)?.scrollIntoView({
-            behavior: 'smooth'
-        });
-    };
-
-
     return (
         <motion.nav
             className={`fixed top-0 left-0 right-0 z-50 py-4 flex justify-center ${clase && clase}`}
@@ -90,12 +66,12 @@ const Navegacion = ({ clase }) => {
                 )
             }}>
             <ul className='list-none flex text-lg font-medium text-gray-400'>
-                {simpleItems.map(item => 
+                {itemsNavegacion.map(item => 
                     <li
                         key={item.linkto}
                         className="mx-2 last-of-type:mr-0 cursor-pointer hover:bg-[#8473FF] hover:text-gray-900 px-3 rounded-2xl"
                         onClick={() => { scrollToSection(item.linkto); }}>
-                        {item.titulo}
+                        {language === 'es' ? item.tituloes : item.tituloen}
                     </li>
                 )}
             </ul>
@@ -104,4 +80,4 @@ const Navegacion = ({ clase }) => {
     );
 };
 
-export default Navegacion;
+export default MenuDesktop;

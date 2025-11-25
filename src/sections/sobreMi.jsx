@@ -6,39 +6,7 @@ import ItemOtros from "@/components/itemOtros";
 import { motion } from "framer-motion";
 import { resumen, experiencia, formacion, otros, herramientas } from "@/data/datosSobreMi";
 import { useLanguage } from "@/context/langContext";
-
-const itemVariants = {
-    hidden: {
-        y: 0,
-        opacity: 0
-    },
-    visible: (delay) => ({
-        y: [0, -20, 0],
-        opacity: [0, 1, 1],
-        transition: {
-            duration: 1,
-            delay: delay,
-            ease: "easeInOut",
-            times: [0, 0.5, 1]
-        }
-    })
-}
-
-const itemVariants2 = {
-    hidden: {
-        x: -50,
-        opacity: 0
-    },
-    visible: (delay) => ({
-        x: [-50, 0],
-        opacity: [0, 1],
-        transition: {
-            duration: 1,
-            delay: delay,
-            ease: "easeInOut"
-        }
-    })
-}
+import { wavy, drag } from "@/constants/animations";
 
 const SobreMI = () => {
     const { language } = useLanguage();
@@ -60,15 +28,8 @@ const SobreMI = () => {
                     {experiencia[language].map((trabajo, index) => (
                         <motion.div
                             key={`exp-${index}`}
-                            custom={index * 0.20}
-                            variants={itemVariants}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{
-                                once: true,
-                                amount: 0.3
-                            }}
                             className="flex-1"
+                            {...wavy(index)}
                         >
                             <ExperienciaCard
                                 titulo={trabajo.titulo}
@@ -87,15 +48,8 @@ const SobreMI = () => {
                     {formacion[language].map((item, index) => (
                         <motion.div
                             key={`form-${index}`}
-                            custom={index * 0.20}
-                            variants={itemVariants}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{
-                                once: true,
-                                amount: 0.3
-                            }}
                             className="flex-1"
+                            {...wavy(index)}
                         >
                         <ItemFormacion
                             imagen={item.imagen}
@@ -114,15 +68,8 @@ const SobreMI = () => {
                     {herramientas.map((item, index) => (
                         <motion.div
                             className="flex flex-col items-center"
-                            key={item.titulo}
-                            custom={index * 0.20}
-                            variants={itemVariants2}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{
-                                once: true,
-                                amount: 0.3
-                            }}
+                            key={`herramienta-${index}`}
+                            {...drag(index)}
                         >
                             <article className="bg-radial from-gray-600 to-gray-900 rounded-xl ring-1 ring-gray-600 p-2">
                                 <svg
@@ -142,8 +89,9 @@ const SobreMI = () => {
                     texto={language === 'es' ? 'Otras habilidades' : 'Other skills'}
                     clase='mb-10'
                 />
-                {otros[language].map(item => (
+                {otros[language].map((item, index) => (
                     <ItemOtros
+                        key={`OtherSkills-${index}`}
                         clase='mb-3 text-white'
                         titulo={item.titulo}
                         descripcion={item.descripcion}

@@ -5,6 +5,8 @@ import galeria from "@/assets/img/AAAL/aaal-beta.vercel.app_ (4).png";
 import ItemOtros from "@/components/itemOtros";
 import BotonLink from "@/components/botonLink";
 import { useLanguage } from "@/context/langContext";
+import { motion } from "framer-motion";
+import { fadeInUp } from '@/constants/animations';
 
 const Aaal = ({ clase }) => {
     const { language } = useLanguage();
@@ -12,7 +14,8 @@ const Aaal = ({ clase }) => {
     return (
         <div className={clase && clase}>
             <article className="flex gap-7 mb-15 items-center">
-                <div
+                <motion.div
+                    {...fadeInUp}
                     className="w-1/3 rounded-xl shadow-md shadow-gray-400 ring-1 ring-gray-700 bg-cover bg-center overflow-hidden group relative">
                     <a
                         className="block"
@@ -27,7 +30,7 @@ const Aaal = ({ clase }) => {
                             {language === 'es' ? 'Visitar sitio' : 'Visit website'}<i className="fa-solid fa-arrow-up-right-from-square ml-2"></i>
                         </div>
                     </a>
-                </div>
+                </motion.div>
 
                 <div className="w-2/3">
                     <p className="text-gray-200 mb-7">
@@ -88,7 +91,9 @@ const Aaal = ({ clase }) => {
                             color='gray-200' />
                     </article>
                 </div>
-                <div className="flex justify-between w-1/2">
+                <motion.div
+                    {...fadeInUp}
+                    className="flex justify-between w-1/2">
                     <img
                         className="rounded-xl h-[300px] shadow-md shadow-gray-400 border-6 border-gray-800"
                         src={formulario}
@@ -101,7 +106,7 @@ const Aaal = ({ clase }) => {
                         className="rounded-xl h-[300px] shadow-md shadow-gray-400 border-6 border-gray-800"
                         src={galeria}
                         alt="AAAL galeria mobile" />
-                </div>
+                </motion.div>
             </article>
         </div>
     );

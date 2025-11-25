@@ -1,5 +1,6 @@
 import '@/style.css';
 import { LanguageProvider } from '@/context/langContext';
+import { MobileProvider } from '@/context/mobileContext';
 
 import Home from "@/sections/home";
 import SobreMi from "@/sections/sobreMi";
@@ -12,17 +13,19 @@ function App() {
 
   return (
     <>
-      <LanguageProvider>
-        <Home />
-        <Divisor />
-        <SobreMi />
-        <Divisor />
-        <FullStack />
-        <Divisor />
-        <Uxui />
-        <Divisor />
-        <Contacto />
-      </LanguageProvider>
+      <MobileProvider>
+        <LanguageProvider>
+          <Home />
+          <Divisor />
+          <SobreMi />
+          <Divisor />
+          <FullStack />
+          <Divisor />
+          <Uxui />
+          <Divisor />
+          <Contacto />
+        </LanguageProvider>
+      </MobileProvider>
     </>
   )
 }

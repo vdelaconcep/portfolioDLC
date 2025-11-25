@@ -1,6 +1,8 @@
 import Subtitulo from "@/components/subtitulo";
 import ItemOtros from "@/components/itemOtros";
 import BotonLink from "@/components/botonLink";
+import { motion } from "framer-motion";
+import { fadeInUp } from '@/constants/animations';
 
 import mockup from "@/assets/img/veteclick/mockup.jpg";
 
@@ -48,13 +50,14 @@ const Uxui = () => {
                                 <ItemOtros
                                     clase='mb-4'
                                     titulo='UI kit'
-                                    link='#'
+                                    link='https://www.figma.com/design/AoJ75nMe565DILHtOjqMv9/veteClick---UI-kit?node-id=0-1&t=PIPCxfIzF7SYbTeW-1'
                                     linkName={language === 'es' ? 'Ver UI Kit en Figma' : 'Go to UI Kit in Figma'} />
                             </div>
 
                         </div>
                     </article>
-                    <article
+                    <motion.article
+                        {...fadeInUp}
                         className="w-1/3 aspect-[688/836] rounded-xl shadow-md shadow-gray-800 bg-cover bg-center overflow-hidden group relative">
                         <a
                             className="block"
@@ -70,14 +73,16 @@ const Uxui = () => {
 
                             </div>
                         </a>
-                    </article>
+                    </motion.article>
 
                 </div>
 
                 <div className="flex gap-7 my-10">
-                    <article className="overflow-hidden h-[363px] w-[210px] rounded-3xl relative ring-2 ring-black">
+                    <motion.article
+                        {...fadeInUp}
+                        className="overflow-hidden h-[363px] w-[210px] rounded-3xl relative ring-2 ring-black">
                         <video src={video} autoPlay loop muted className="scale-117 absolute top-1/2 right-1/2 translate-x-[109px] -translate-y-[169px]" ></video>
-                    </article>
+                    </motion.article>
                     <div className="flex-1 w-full flex flex-col justify-between">
                     <ul>
                         {language === 'es' ?
