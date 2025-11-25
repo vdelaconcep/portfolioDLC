@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import MenuDesktop from '@/components/menuDesktop';
 import { useLanguage } from "@/context/langContext";
 
 
@@ -9,7 +8,6 @@ const Home = () => {
 
     return (
         <section id='home' className="bg-gradient-to-tr from-[#1B093F] from-2% to-[#080918] h-[100dvh] to-80% flex flex-col px-8 md:px-10 overflow-hidden comfortaa items-center">
-            <MenuDesktop />  
             <div className='h-full flex flex-col justify-center relative max-w-[1440px]'>
                 <article
                     className="text-[40px] md:text-[50px] lg:text-[70px] xl:text-[90px] flex flex-col mb-5 font-bold">

@@ -8,6 +8,7 @@ import FullStack from '@/sections/fullStack';
 import Uxui from '@/sections/uxui';
 import Contacto from '@/sections/contacto';
 import Divisor from '@/components/divisor';
+import Navegacion from '@/components/navegacion';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
     <>
       <MobileProvider>
         <LanguageProvider>
+          <Navegacion />
           <Home />
           <Divisor />
           <SobreMi />
