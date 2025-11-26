@@ -12,10 +12,14 @@ export const useLanguage = () => {
 
 export const LanguageProvider = ({ children }) => {
 
-    const [language, setLanguage] = useState('es');
+    const lastLanguageSelected = localStorage.getItem('lastLanguageSelected');
+
+    const [language, setLanguage] = useState(lastLanguageSelected || 'es');
 
     const toggleLanguage = () => {
-        setLanguage(language === 'es' ? 'en' : 'es');
+        const newSelectedLanguage = language === 'es' ? 'en' : 'es';
+        setLanguage(newSelectedLanguage);
+        localStorage.setItem('lastLanguageSelected', newSelectedLanguage);
     };
 
     return (
