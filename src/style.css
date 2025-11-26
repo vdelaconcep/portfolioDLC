@@ -2,18 +2,24 @@
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('./assets/fonts/Montserrat.ttf');
+    src: url('./assets/fonts/Montserrat.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
 }
 
 @font-face {
     font-family: 'Comfortaa';
-    src: url('./assets/fonts/Comfortaa-VariableFont_wght.ttf');
+    src: url('./assets/fonts/Comfortaa-VariableFont_wght.ttf') format('truetype');
+        font-weight: 100 900;
+        font-style: normal;
+        font-display: swap;
 }
 
 .montserrat {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .comfortaa {
-    font-family: 'Comfortaa';
+    font-family: 'Comfortaa', -apple-system, BlinkMacSystemFont, sans-serif;
 }
