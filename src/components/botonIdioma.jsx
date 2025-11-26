@@ -6,9 +6,9 @@ const BotonIdioma = ({ clase }) => {
     const { isMobile } = useMobile();
 
     return (
-        <article className={`text-white montserrat flex ${clase && clase}`}>
+        <article className={`montserrat flex ${clase && clase} ${isMobile ? 'text-gray-400' : 'text-white'}`}>
             <button
-                className={`${(!isMobile && language === 'es') ? 'text-gray-700 mr-1' : 'cursor-pointer mr-1'} ${isMobile && 'ring-1 ring-gray-400 rounded-md px-1'}`}
+                className={`${(!isMobile && language === 'es') ? 'text-gray-700 mr-1' : 'cursor-pointer mr-1'}`}
                 onClick={toggleLanguage}
                 disabled={!isMobile && language === 'es'}
                 title={language === 'en' ? 'Cambiar idioma' : (!isMobile ? undefined : 'Toggle language')}>
