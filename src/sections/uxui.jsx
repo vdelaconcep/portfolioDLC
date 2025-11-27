@@ -9,21 +9,42 @@ import mockup from "@/assets/img/veteclick/mockup.jpg";
 import video from "@/assets/video/veteclicksi.mp4";
 
 import { useLanguage } from "@/context/langContext";
+import { useMobile } from "@/context/mobileContext";
 
 const Uxui = () => {
     const { language } = useLanguage();
+    const { isMobile } = useMobile();
 
     return (
-        <section id="uxui" className="min-h-[100dvh] bg-gray-300 p-10 pt-18 montserrat flex flex-col items-center">
+        <section id="uxui" className={`bg-gray-300 flex flex-col items-center pt-18 pb-10 montserrat ${isMobile ? 'px-2' : 'px-10'}`}>
             <h1 className="text-5xl font-bold text-black text-shadow-md text-shadow-gray-400 my-4 text-center comfortaa">{ language === 'es' ? 'Proyectos de diseño UX-UI' : 'UX/UI Design Projects'}</h1>
             <div className="max-w-[1440px] h-full w-full px-4">
                 <Subtitulo
                     texto={language === 'es' ? 'App veterinaria' : 'Veterinary app'}
                     clase='my-10' />
 
-                <div className="flex gap-7 my-10 w-full items-center">
+                <div className={`flex w-full items-center ${isMobile ? 'flex-col' : 'gap-7'}`}>
+
+                    <motion.article
+                        {...fadeInUp}
+                        className={`w-full aspect-[688/836] rounded-xl shadow-md shadow-gray-800 bg-cover bg-center overflow-hidden group relative ${!isMobile && 'hidden'}`}>
+                        <a
+                            className="block"
+                            href="https://www.figma.com/design/VjjO2uZo4a5xFHAkgdUpVJ/Equipo-11---veteClick---wireframes?node-id=0-1&t=OBKQjiLyTZIUSveC-1"
+                            target="_blank">
+                            <img
+                                className="w-full h-full object-cover transition-all duration-200 group-hover:blur-sm group-hover:scale-105"
+                                src={mockup}
+                                alt="Veteclick mockup" />
+                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-200"></div>
+                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 text-white text-xl font-semibold transition-all duration-200 p-5">
+                                <span>{language === 'es' ? 'Ver wireframes en Figma' : 'See wireframes in Figma'}<i className="fa-solid fa-arrow-up-right-from-square ml-2"></i></span>
+
+                            </div>
+                        </a>
+                    </motion.article>
                     
-                    <article className="w-full">
+                    <article className={`w-full ${isMobile && 'mt-10'}`}>
                         <p className="text-black">
                             {language === 'es' ?
                                 'Aplicación de atención veterinaria online como proyecto final de la diplomatura en desarrollo UX/UI de la UTN. Incluye investigación y diseño centrado en el usuario, además del desarrollo del ‘happy path’ de la interfaz en Figma.' :
@@ -48,7 +69,7 @@ const Uxui = () => {
                                     descripcion={language === 'es' ? 'En alta, media y baja definición / Pruebas de usabilidad' : 'Low-, mid-, and high-fi prototypes + usability testing'} />
 
                                 <ItemOtros
-                                    clase='mb-4'
+                                    clase={!isMobile && 'mb-4'}
                                     titulo='UI kit'
                                     link='https://www.figma.com/design/AoJ75nMe565DILHtOjqMv9/veteClick---UI-kit?node-id=0-1&t=PIPCxfIzF7SYbTeW-1'
                                     linkName={language === 'es' ? 'Ver UI Kit en Figma' : 'Go to UI Kit in Figma'} />
@@ -58,7 +79,7 @@ const Uxui = () => {
                     </article>
                     <motion.article
                         {...fadeInUp}
-                        className="w-1/3 aspect-[688/836] rounded-xl shadow-md shadow-gray-800 bg-cover bg-center overflow-hidden group relative">
+                        className={`w-1/3 aspect-[688/836] rounded-xl shadow-md shadow-gray-800 bg-cover bg-center overflow-hidden group relative ${isMobile && 'hidden'}`}>
                         <a
                             className="block"
                             href="https://www.figma.com/design/VjjO2uZo4a5xFHAkgdUpVJ/Equipo-11---veteClick---wireframes?node-id=0-1&t=OBKQjiLyTZIUSveC-1"
@@ -77,13 +98,13 @@ const Uxui = () => {
 
                 </div>
 
-                <div className="flex gap-7 my-10">
+                <div className={`flex ${isMobile ? 'flex-col items-center mt-10' : 'gap-7 my-10'}`}>
                     <motion.article
                         {...fadeInUp}
                         className="overflow-hidden h-[363px] w-[210px] rounded-3xl relative ring-2 ring-black">
                         <video src={video} autoPlay loop muted className="scale-117 absolute top-1/2 right-1/2 translate-x-[109px] -translate-y-[169px]" ></video>
                     </motion.article>
-                    <div className="flex-1 w-full flex flex-col justify-between">
+                    <div className={`flex-1 w-full flex flex-col justify-between ${isMobile && 'mt-10'}`}>
                     <ul>
                         {language === 'es' ?
                             <>
@@ -103,7 +124,7 @@ const Uxui = () => {
                         }
 
                         </ul>
-                        <article className="flex gap-5 justify-end mt-auto">
+                        <article className={`flex justify-end  ${isMobile ? 'mt-5 mb-10 flex-col gap-3' : 'mt-auto gap-2'}`}>
                             <BotonLink
                                 enlace='https://www.figma.com/design/VjjO2uZo4a5xFHAkgdUpVJ/Equipo-11---veteClick---wireframes?node-id=0-1&t=OBKQjiLyTZIUSveC-1'
                                 color='gray-800'

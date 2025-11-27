@@ -7,16 +7,18 @@ import BotonLink from "@/components/botonLink";
 import { useLanguage } from "@/context/langContext";
 import { motion } from "framer-motion";
 import { fadeInUp } from '@/constants/animations';
+import { useMobile } from "@/context/mobileContext";
 
 const Aaal = ({ clase }) => {
     const { language } = useLanguage();
+    const { isMobile } = useMobile();
 
     return (
         <div className={clase && clase}>
-            <article className="flex gap-7 mb-15 items-center">
+            <article className={`flex w-full items-center ${isMobile ? 'flex-col' : 'gap-7'}`}>
                 <motion.div
                     {...fadeInUp}
-                    className="w-1/3 rounded-xl shadow-md shadow-gray-400 ring-1 ring-gray-700 bg-cover bg-center overflow-hidden group relative">
+                    className={`rounded-xl shadow-md shadow-gray-400 ring-1 ring-gray-700 bg-cover bg-center overflow-hidden group relative ${isMobile ? 'w-full' : 'w-1/3'}`}>
                     <a
                         className="block"
                         href="https://aaal-beta.vercel.app/"
@@ -32,8 +34,8 @@ const Aaal = ({ clase }) => {
                     </a>
                 </motion.div>
 
-                <div className="w-2/3">
-                    <p className="text-gray-200 mb-7">
+                <div className={isMobile ? 'w-full' : 'w-2/3'}>
+                    <p className={`text-gray-200 mb-7 ${isMobile ? 'mt-10' : 'mb-7'}`}>
                         {language === 'es' ? 'Sitio web institucional del Club Asociación de Automóviles Antiguos de Lanús que incluye novedades, historia, eventos, avisos clasificados, galería de fotos y catálogo de automóviles.'
                             : "Institutional website for the Club Asociación de Automóviles Antiguos de Lanús featuring news, history, events, classified ads, photo gallery, and car catalog."}
                     </p>
@@ -55,7 +57,7 @@ const Aaal = ({ clase }) => {
                                 descripcion='MySQL' />
 
                             <ItemOtros
-                                clase='mb-4'
+                                clase={!isMobile && 'mb-4'}
                                 titulo='Deploy'
                                 descripcion='Vercel, Render' />
                         </div>
@@ -64,8 +66,24 @@ const Aaal = ({ clase }) => {
                 </div>
             </article>
 
-            <article className="flex gap-7 mt-10 w-full">
-                <div className="w-1/2 flex flex-col justify-between">
+            <article className={`flex mt-10 w-full ${isMobile ? 'flex-col' : 'gap-7'}`}>
+                <motion.div
+                    {...fadeInUp}
+                    className={`w-full flex gap-2 justify-between ${!isMobile && 'hidden'}`}>
+                    <img
+                        className="rounded-xl flex-1 h-auto min-w-0 object-contain shadow-md shadow-gray-400 border-3 border-gray-800"
+                        src={formulario}
+                        alt="AAAL formulario mobile" />
+                    <img
+                        className="rounded-xl flex-1 h-auto min-w-0 object-contain shadow-md shadow-gray-400 border-3 border-gray-800"
+                        src={mensajes}
+                        alt="AAAL mensajes mobile" />
+                    <img
+                        className="rounded-xl flex-1 h-auto min-w-0 object-contain shadow-md shadow-gray-400 border-3 border-gray-800"
+                        src={galeria}
+                        alt="AAAL galeria mobile" />
+                </motion.div>
+                <div className={`flex flex-col justify-between ${isMobile ? 'w-full mt-10' : 'w-1/2'}`}>
                     <ul className="text-gray-200">
                         {language === 'es' ?
                             <>
@@ -85,7 +103,7 @@ const Aaal = ({ clase }) => {
                         }
 
                     </ul>
-                    <article className="flex justify-end mx-10 mt-auto">
+                    <article className={`flex justify-end  ${isMobile ? 'mt-5 flex-col' : 'mx-10 mt-auto'}`}>
                         <BotonLink
                             enlace='https://aaal-beta.vercel.app/'
                             color='gray-200' />
@@ -93,7 +111,7 @@ const Aaal = ({ clase }) => {
                 </div>
                 <motion.div
                     {...fadeInUp}
-                    className="flex justify-between w-1/2">
+                    className={`flex justify-between w-1/2 ${isMobile && 'hidden'}`}>
                     <img
                         className="rounded-xl h-[300px] shadow-md shadow-gray-400 border-6 border-gray-800"
                         src={formulario}

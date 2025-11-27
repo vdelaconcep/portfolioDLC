@@ -7,12 +7,14 @@ import { motion } from "framer-motion";
 import { resumen, experiencia, formacion, otros, herramientas } from "@/data/datosSobreMi";
 import { useLanguage } from "@/context/langContext";
 import { wavy, drag } from "@/constants/animations";
+import { useMobile } from '../context/mobileContext';
 
 const SobreMI = () => {
     const { language } = useLanguage();
+    const { isMobile } = useMobile();
 
     return (
-        <section id="about" className="bg-gradient-to-tr from-gray-800 to-gray-900 flex flex-col items-center p-10 pt-18 montserrat">
+        <section id="about" className={`bg-gradient-to-tr from-gray-800 to-gray-900 flex flex-col items-center pt-18 montserrat ${isMobile ? 'px-2 pb-15' : 'px-10 pb-10'}`}>
             <div className="h-full w-full p-4 pt-6 max-w-[1440px]">
                 <Presentacion
                     titulo={language === 'es' ? 'Sobre mí' : 'About me'}
@@ -23,7 +25,7 @@ const SobreMI = () => {
                     clase='mb-10'
                 />
                 
-                <div className="flex gap-3 justify-center w-full mb-15">
+                <div className={`flex gap-3 justify-center w-full mb-15 ${isMobile && 'flex-col items-center'}`}>
                     
                     {experiencia[language].map((trabajo, index) => (
                         <motion.div
@@ -44,7 +46,7 @@ const SobreMI = () => {
                     texto={language === 'es' ? 'Formación' : 'Education & training'}
                     clase='mb-10'
                 />
-                <div className="grid grid-cols-3 gap-4 w-full mb-15">
+                <div className={`w-full mb-15 ${isMobile ? 'flex flex-col gap-3' : 'grid grid-cols-3 gap-4'}`}>
                     {formacion[language].map((item, index) => (
                         <motion.div
                             key={`form-${index}`}
@@ -64,10 +66,10 @@ const SobreMI = () => {
                     texto={language === 'es' ? 'Herramientas utilizadas' : 'Work tools'}
                     clase='mb-10'
                 />
-                <div className="flex justify-between w-full mb-15">
+                <div className={`w-full mb-15 ${isMobile ? 'grid grid-cols-3' : 'flex justify-between'}`}>
                     {herramientas.map((item, index) => (
                         <motion.div
-                            className="flex flex-col items-center"
+                            className={`flex flex-col items-center ${isMobile && 'mb-5'}`}
                             key={`herramienta-${index}`}
                             {...drag(index)}
                         >
@@ -79,7 +81,7 @@ const SobreMI = () => {
                                         <use href={`/sprite.svg#${item.titulo}`}/>
                                 </svg>
                             </article>
-                            <h4 className="text-white capitalize mt-3">{item.titulo}</h4>
+                            <h4 className={`text-white capitalize ${isMobile ? 'mt-1' : 'mt-3'}`}>{item.titulo}</h4>
                         </motion.div>
                     ) 
 

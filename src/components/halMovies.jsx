@@ -4,18 +4,21 @@ import mainMobile from "@/assets/img/HAL/halmovies.onrender.com_ (1).png";
 import detalleMobile from "@/assets/img/HAL/halmovies.onrender.com_ (2).png";
 import ItemOtros from "@/components/itemOtros";
 import { useLanguage } from "@/context/langContext";
-import BotonLink from "./botonLink";
+import BotonLink from "@/components/botonLink";
 import { motion } from "framer-motion";
-import { fadeInUp } from '../constants/animations';
+import { fadeInUp } from '@/constants/animations';
+import { useMobile } from "@/context/mobileContext";
 
 const HalMovies = ({ clase }) => {
     const { language } = useLanguage();
+    const { isMobile } = useMobile();
+
     return (
         <div className={clase && clase}>
-            <article className="flex gap-7 w-full items-center">
+            <article className={`flex w-full items-center ${isMobile ? 'flex-col' : 'gap-7'}`}>
                 <motion.div
                     {...fadeInUp}
-                    className="w-1/2 rounded-xl shadow-md shadow-gray-400 ring-1 ring-gray-700 bg-cover bg-center overflow-hidden group relative">
+                    className={`rounded-xl shadow-md shadow-gray-400 ring-1 ring-gray-700 bg-cover bg-center overflow-hidden group relative ${isMobile ? 'w-full' : 'w-1/2'}`}>
                     <a
                         className="block"
                         href="https://halmovies.onrender.com/"
@@ -31,8 +34,8 @@ const HalMovies = ({ clase }) => {
                     </a>
                 </motion.div>
                 
-                <div className="w-1/2">
-                    <p className="text-gray-200 mb-15">
+                <div className={isMobile ? 'w-full mt-10' : 'w-1/2'}>
+                    <p className={`text-gray-200 ${isMobile ? 'mb-10' : 'mb-15'}`}>
                         {language === 'es' ? 'Aplicación web desarrollada en React que consume la API de TMDB para mostrar información sobre películas. Incluye funcionalidades de búsqueda, filtrado y visualización de detalles. Diseño responsive para ver en cualquier dispositivo.'
                             : "Web application developed in React that consumes the TMDB API to display movie information. Features search functionality, filtering, and movie details views. Responsive design for viewing on any device."}
                     </p>
@@ -44,7 +47,7 @@ const HalMovies = ({ clase }) => {
                                 descripcion='React, Vite, CSS/Bootstrap' />
 
                             <ItemOtros
-                                clase='mb-4'
+                                clase={!isMobile && 'mb-4'}
                                 titulo='Deploy'
                                 descripcion='Render' />
                         </div>
@@ -53,8 +56,24 @@ const HalMovies = ({ clase }) => {
                 </div>
         
             </article>
-            <article className="flex gap-7 my-15 w-full">
-                <div className="w-1/2 flex flex-col justify-between">
+            <article className={`flex w-full ${isMobile ? 'flex-col mt-10' : 'gap-7 my-15'}`}>
+                <motion.div
+                    {...fadeInUp}
+                    className={`w-full flex gap-2 justify-between ${!isMobile && 'hidden'}`}>
+                    <img
+                        className="rounded-xl flex-1 h-auto min-w-0 object-contain shadow-md shadow-gray-400 border-3 border-gray-800"
+                        src={portadaMobile}
+                        alt="HAL portada mobile" />
+                    <img
+                        className="rounded-xl flex-1 h-auto min-w-0 object-contain shadow-md shadow-gray-400 border-3 border-gray-800"
+                        src={mainMobile}
+                        alt="HAL main mobile" />
+                    <img
+                        className="rounded-xl flex-1 h-auto min-w-0 object-contain shadow-md shadow-gray-400 border-3 border-gray-800"
+                        src={detalleMobile}
+                        alt="HAL detalle mobile" />
+                </motion.div>
+                <div className={`flex flex-col justify-between ${isMobile ? 'w-full mt-10' : 'w-1/2'}`}>
                     <ul className="text-gray-200">
                         {language === 'es' ?
                             <>
@@ -73,7 +92,7 @@ const HalMovies = ({ clase }) => {
                             </>
                         }
                     </ul>
-                    <article className="flex justify-end mx-10 mt-auto">
+                    <article className={`flex justify-end  ${isMobile ? 'mt-10 flex-col' : 'mx-10 mt-auto'}`}>
                         <BotonLink
                             enlace='https://halmovies.onrender.com/'
                             color='gray-200'/>
@@ -82,7 +101,7 @@ const HalMovies = ({ clase }) => {
                 </div>
                 <motion.div
                     {...fadeInUp}
-                    className="flex justify-between w-1/2">
+                    className={`flex justify-between w-1/2 ${isMobile && 'hidden'}`}>
                     <img
                         className="rounded-xl h-[300px] shadow-md shadow-gray-400 border-6 border-gray-800"
                         src={portadaMobile}
