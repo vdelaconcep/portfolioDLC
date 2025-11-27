@@ -26,9 +26,10 @@ const Contacto = () => {
                         "If you’re interested in my work and want to see more, feel free to reach out. I’m open to new projects"
                     }
                 </h4>
-                <div className={`flex justify-between w-full ${isMobile && 'flex-col gap-4 mt-10 items-center'}`}>
+                <div className={`flex justify-between w-full gap-4  ${isMobile && 'flex-col mt-10 items-center'}`}>
                     {contacto.map((item, index) =>
                         <motion.div
+                            className="flex flex-col w-full"
                             key={`botonContacto-${index}`}
                             {...(isMobile ? fadeInUp : wavy(index))}
                         >
