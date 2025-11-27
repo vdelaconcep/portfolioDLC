@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import BotonContacto from "@/components/botonContacto";
 import { contacto } from "@/data/datosContacto";
 import { useLanguage } from '@/context/langContext';
-import { wavy, drag } from '@/constants/animations';
+import { wavy, fadeInUp } from '@/constants/animations';
 import { useMobile } from "@/context/mobileContext";
 
 const Contacto = () => {
@@ -30,7 +30,7 @@ const Contacto = () => {
                     {contacto.map((item, index) =>
                         <motion.div
                             key={`botonContacto-${index}`}
-                            {...(isMobile ? drag : wavy(index))}
+                            {...(isMobile ? fadeInUp : wavy(index))}
                         >
                         <BotonContacto
                             

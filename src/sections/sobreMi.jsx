@@ -6,7 +6,7 @@ import ItemOtros from "@/components/itemOtros";
 import { motion } from "framer-motion";
 import { resumen, experiencia, formacion, otros, herramientas } from "@/data/datosSobreMi";
 import { useLanguage } from "@/context/langContext";
-import { wavy, drag } from "@/constants/animations";
+import { wavy, drag, fadeInUp } from "@/constants/animations";
 import { useMobile } from '../context/mobileContext';
 
 const SobreMI = () => {
@@ -31,7 +31,7 @@ const SobreMI = () => {
                         <motion.div
                             key={`exp-${index}`}
                             className="flex-1"
-                            {...(isMobile ? drag : wavy(index))}
+                            {...(isMobile ? fadeInUp : wavy(index))}
                         >
                             <ExperienciaCard
                                 titulo={trabajo.titulo}
@@ -51,7 +51,7 @@ const SobreMI = () => {
                         <motion.div
                             key={`form-${index}`}
                             className="flex-1"
-                            {...(isMobile ? drag : wavy(index))}
+                            {...(isMobile ? fadeInUp : wavy(index))}
                         >
                         <ItemFormacion
                             imagen={item.imagen}
