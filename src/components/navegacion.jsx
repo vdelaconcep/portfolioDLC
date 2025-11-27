@@ -121,7 +121,7 @@ const Navegacion = ({ clase }) => {
                     animate={{ x: 0 }}
                     exit={{ x: '-100%' }}
                     transition={{ duration: 0.3, ease: 'easeInOut' }}>
-                    <ul className='list-none font-medium text-gray-400 text-lg px-10 py-0'>
+                    <ul className='list-none montserrat font-medium text-gray-400 text-lg px-10 py-0'>
                         {itemsNavegacion.map(item =>
                             <li
                                 key={item.linkto}

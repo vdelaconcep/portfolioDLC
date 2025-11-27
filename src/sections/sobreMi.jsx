@@ -31,7 +31,7 @@ const SobreMI = () => {
                         <motion.div
                             key={`exp-${index}`}
                             className="flex-1"
-                            {...wavy(index)}
+                            {...(isMobile ? drag : wavy(index))}
                         >
                             <ExperienciaCard
                                 titulo={trabajo.titulo}
@@ -51,7 +51,7 @@ const SobreMI = () => {
                         <motion.div
                             key={`form-${index}`}
                             className="flex-1"
-                            {...wavy(index)}
+                            {...(isMobile ? drag : wavy(index))}
                         >
                         <ItemFormacion
                             imagen={item.imagen}

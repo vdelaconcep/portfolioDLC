@@ -30,7 +30,7 @@ const Contacto = () => {
                     {contacto.map((item, index) =>
                         <motion.div
                             key={`botonContacto-${index}`}
-                            {...wavy(index)}
+                            {...(isMobile ? drag : wavy(index))}
                         >
                         <BotonContacto
                             
