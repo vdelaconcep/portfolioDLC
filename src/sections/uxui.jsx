@@ -10,10 +10,12 @@ import video from "@/assets/video/veteclicksi.mp4";
 
 import { useLanguage } from "@/context/langContext";
 import { useMobile } from "@/context/mobileContext";
+import VerSitioMobile from "@/components/verSitioMobile";
 
 const Uxui = () => {
     const { language } = useLanguage();
     const { isMobile } = useMobile();
+    const invitacion = language === 'es' ? 'Ver en Figma' : 'View in Figma'
 
     return (
         <section id="uxui" className={`bg-gray-300 flex flex-col items-center pt-18 pb-10 montserrat ${isMobile ? 'px-2' : 'px-10'}`}>
@@ -36,10 +38,9 @@ const Uxui = () => {
                                 className="w-full h-full object-cover transition-all duration-200 group-hover:blur-sm group-hover:scale-105"
                                 src={mockup}
                                 alt="Veteclick mockup" />
-                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-200"></div>
-                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 text-white text-xl font-semibold transition-all duration-200 p-5">
-                                <span>{language === 'es' ? 'Ver wireframes en Figma' : 'See wireframes in Figma'}<i className="fa-solid fa-arrow-up-right-from-square ml-2"></i></span>
-
+                            <div className="absolute bottom-0 right-0 z-50000">
+                                <VerSitioMobile
+                                    texto={invitacion} />
                             </div>
                         </a>
                     </motion.article>
@@ -90,7 +91,7 @@ const Uxui = () => {
                                 alt="Veteclick mockup" />
                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-200"></div>
                             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 text-white text-xl font-semibold transition-all duration-200 p-5">
-                                <span>{language === 'es' ? 'Ver wireframes en Figma' : 'See wireframes in Figma'}<i className="fa-solid fa-arrow-up-right-from-square ml-2"></i></span>
+                                <span>{invitacion}<i className="fa-solid fa-arrow-up-right-from-square ml-2"></i></span>
 
                             </div>
                         </a>
@@ -124,21 +125,15 @@ const Uxui = () => {
                         }
 
                         </ul>
-                        <article className={`flex justify-end  ${isMobile ? 'mt-5 mb-10 flex-col gap-3' : 'mt-auto gap-2'}`}>
+                        <article className={`flex justify-end gap-3 ${isMobile ? 'mt-5 mb-10 flex-col' : 'mt-auto'}`}>
                             <BotonLink
                                 enlace='https://www.figma.com/design/VjjO2uZo4a5xFHAkgdUpVJ/Equipo-11---veteClick---wireframes?node-id=0-1&t=OBKQjiLyTZIUSveC-1'
                                 color='gray-800'
-                                texto={{
-                                    es: 'Ver wireframes',
-                                    en: 'Wireframes'
-                                }} />
+                                texto={language === 'es' ? 'Ver wireframes' : 'View wireframes'} />
                             <BotonLink
                                 enlace='https://www.figma.com/proto/VjjO2uZo4a5xFHAkgdUpVJ/Equipo-11---veteClick---wireframes?node-id=1-1250&t=sxMmiInhuReBR6pq-1'
                                 color='gray-800'
-                                texto={{
-                                    es: 'Ver prototipo',
-                                    en: 'Prototype'
-                                }}/>
+                                texto={language === 'es' ? 'Ver prototipo' : 'View prototype'}/>
                         </article>
 
                     </div>

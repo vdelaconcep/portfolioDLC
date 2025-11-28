@@ -8,10 +8,12 @@ import { useLanguage } from "@/context/langContext";
 import { motion } from "framer-motion";
 import { fadeInUp } from '@/constants/animations';
 import { useMobile } from "@/context/mobileContext";
+import VerSitioMobile from "@/components/verSitioMobile";
 
 const Aaal = ({ clase }) => {
     const { language } = useLanguage();
     const { isMobile } = useMobile();
+    const invitacion = language === 'es' ? 'Ir al sitio web' : 'Go to website'
 
     return (
         <div className={clase && clase}>
@@ -27,10 +29,18 @@ const Aaal = ({ clase }) => {
                             className="w-full h-full object-cover transition-all duration-200 group-hover:blur-sm group-hover:scale-105"
                             src={mainDesktop}
                             alt="AAAL home desktop" />
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-200"></div>
-                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 text-white text-xl font-semibold transition-all duration-200">
-                            {language === 'es' ? 'Visitar sitio' : 'Visit website'}<i className="fa-solid fa-arrow-up-right-from-square ml-2"></i>
-                        </div>
+                        {isMobile ?
+                            <div className="absolute bottom-0 right-0 z-50000">
+                                <VerSitioMobile
+                                    texto={invitacion} />
+                            </div> :
+                            <>
+                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-200"></div>
+                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 text-white text-xl font-semibold transition-all duration-200">
+                                    {invitacion}<i className="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+                                </div>
+                            </>
+                        }
                     </a>
                 </motion.div>
 
@@ -105,6 +115,7 @@ const Aaal = ({ clase }) => {
                     </ul>
                     <article className={`flex justify-end  ${isMobile ? 'mt-5 flex-col' : 'mx-10 mt-auto'}`}>
                         <BotonLink
+                            texto={invitacion}
                             enlace='https://aaal-beta.vercel.app/'
                             color='gray-200' />
                     </article>

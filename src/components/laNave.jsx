@@ -4,6 +4,7 @@ import cards from "@/assets/img/LN/la-nave.vercel.app_ (4).png";
 import admin from "@/assets/img/LN/la-nave.vercel.app_ (6).png"
 import ItemOtros from "@/components/itemOtros";
 import BotonLink from "@/components/botonLink";
+import VerSitioMobile from "@/components/verSitioMobile";
 import { useLanguage } from "@/context/langContext";
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/constants/animations";
@@ -12,6 +13,7 @@ import { useMobile } from "@/context/mobileContext";
 const LaNave = ({ clase }) => {
     const { language } = useLanguage();
     const { isMobile } = useMobile();
+    const invitacion = language === 'es' ? 'Ir al sitio web' : 'Go to website'
 
     return (
         <div className={`max-w-full ${clase && clase}`}>
@@ -27,11 +29,22 @@ const LaNave = ({ clase }) => {
                             className="w-full h-full object-cover transition-all duration-200 group-hover:blur-sm group-hover:scale-105"
                             src={portada}
                             alt="La Nave portada" />
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-200"></div>
-                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 text-white text-xl font-semibold transition-all duration-200">
-                            {language === 'es' ? 'Visitar sitio' : 'Visit website'}<i className="fa-solid fa-arrow-up-right-from-square ml-2"></i>
-                        </div>
+                        
+                        
+                        {isMobile ?
+                            <div className="absolute bottom-0 right-0 z-50000">
+                                <VerSitioMobile
+                                    texto={invitacion} />
+                            </div> :
+                            <>
+                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-200"></div>
+                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 text-white text-xl font-semibold transition-all duration-200">
+                                    {invitacion}<i className="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+                                </div>
+                            </>
+                        }
                     </a>
+                        
                 </motion.div>
                 
                 <div className={isMobile ? 'w-full mb-10' : 'w-2/3'}>
@@ -136,7 +149,7 @@ const LaNave = ({ clase }) => {
                         alt="La Nave panel administrador" />
                 </motion.div>
                 
-                <div className={`flex flex-col justify-between ${isMobile ? 'w-full mt-10' : 'w-1/3'}`}>
+                <div className={`flex flex-col justify-between ${isMobile ? 'w-full mt-10' : 'w-2/3'}`}>
                     <ul className="text-gray-200">
                     {language === 'es' ? 
                         <>
@@ -155,9 +168,10 @@ const LaNave = ({ clase }) => {
                     </ul>
                 
                     <div className={`flex justify-end  ${isMobile ? 'mt-10 flex-col' : 'mx-10 mt-auto'}`}>
-                    <BotonLink
-                        enlace='https://la-nave.vercel.app/'
-                        color='gray-200'/>
+                        <BotonLink
+                            texto={invitacion}
+                            enlace='https://la-nave.vercel.app/'
+                            color='gray-200'/>
                     </div>
                 </div>
             </article>

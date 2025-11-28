@@ -18,7 +18,7 @@ const Contacto = () => {
                 }
             </h1>
 
-            <div className={`flex flex-col items-center  ${isMobile ? 'mt-10 w-full' : 'mt-20 max-w-[600px]'}`}>
+            <div className={`flex flex-col items-center px-4  ${isMobile ? 'mt-10 w-full' : 'mt-20 max-w-[600px]'}`}>
 
                 <h4 className={`text-[#b86dbf] text-center ${!isMobile && 'mb-5'}`}>
                     {language === 'es' ?
