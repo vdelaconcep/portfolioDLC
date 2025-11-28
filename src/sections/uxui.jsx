@@ -38,7 +38,7 @@ const Uxui = () => {
                                 className="w-full h-full object-cover transition-all duration-200 group-hover:blur-sm group-hover:scale-105"
                                 src={mockup}
                                 alt="Veteclick mockup" />
-                            <div className="absolute bottom-0 right-0 z-50000">
+                            <div className="absolute bottom-0 right-0">
                                 <VerSitioMobile
                                     texto={invitacion} />
                             </div>
