@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
 
-const BotonMenu = ({ abierto, setAbierto }) => {
+interface BotonMenuProps {
+    abierto: boolean;
+    setAbierto: (abierto: boolean) => void;
+}
+
+const BotonMenu = ({ abierto, setAbierto }: BotonMenuProps): JSX.Element => {
     return (
         <button
             onClick={() => setAbierto(!abierto)}

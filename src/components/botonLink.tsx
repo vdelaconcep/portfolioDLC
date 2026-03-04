@@ -1,5 +1,10 @@
+interface BotonLinkProps {
+    enlace: string;
+    color: string;
+    texto: string;
+}
 
-const BotonLink = ({ enlace, color, texto }) => {
+const BotonLink = ({ enlace, color, texto }: BotonLinkProps): JSX.Element => {
     return (
         <button className={`rounded-xl ring-2 ring-${color} text-${color} py-2 px-3 font-bold hover:bg-pink-500/20 active:bg-pink-500/20 cursor-pointer hover:scale-105 transition-all duration-100`}>
             <a href={enlace} target="_blank">

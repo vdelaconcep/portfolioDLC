@@ -10,7 +10,7 @@ import { fadeInUp } from '@/constants/animations';
 import { useMobile } from "@/context/mobileContext";
 import VerSitioMobile from "@/components/verSitioMobile";
 
-const HalMovies = ({ clase }) => {
+const HalMovies = ({ clase }: { clase?: string }): JSX.Element => {
     const { language } = useLanguage();
     const { isMobile } = useMobile();
     const invitacion = language === 'es' ? 'Ir al sitio web' : 'Go to website'

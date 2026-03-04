@@ -1,6 +1,11 @@
 import { useMobile } from '../context/mobileContext';
 
-const Subtitulo = ({ texto, clase }) => {
+interface SubtituloProps {
+    texto: string;
+    clase?: string;
+}
+
+const Subtitulo = ({ texto, clase }: SubtituloProps): JSX.Element => {
     const { isMobile } = useMobile();
     return (
         <article className={`flex items-center gap-2 ${clase && clase}`}>

@@ -1,4 +1,4 @@
-export const scrollToSection = (sectionId) => {
+export const scrollToSection = (sectionId: string): void => {
     document.getElementById(sectionId)?.scrollIntoView({
         behavior: 'auto'
     });

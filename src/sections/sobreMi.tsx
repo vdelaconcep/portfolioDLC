@@ -9,7 +9,7 @@ import { useLanguage } from "@/context/langContext";
 import { wavy, drag, fadeInUp } from "@/constants/animations";
 import { useMobile } from '../context/mobileContext';
 
-const SobreMI = () => {
+const SobreMI = (): JSX.Element => {
     const { language } = useLanguage();
     const { isMobile } = useMobile();
 

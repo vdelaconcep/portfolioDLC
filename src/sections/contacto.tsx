@@ -5,7 +5,7 @@ import { useLanguage } from '@/context/langContext';
 import { wavy, fadeInUp } from '@/constants/animations';
 import { useMobile } from "@/context/mobileContext";
 
-const Contacto = () => {
+const Contacto = (): JSX.Element => {
     const { language } = useLanguage();
     const { isMobile } = useMobile();
 

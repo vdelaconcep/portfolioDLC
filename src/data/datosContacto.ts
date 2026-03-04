@@ -1,4 +1,6 @@
-export const contacto = [
+import { ContactItem } from "@/types";
+
+export const contacto: ContactItem[] = [
     {
         contacto: 'GitHub',
         color: 'FFFFFF',

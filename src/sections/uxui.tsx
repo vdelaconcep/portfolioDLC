@@ -12,7 +12,7 @@ import { useLanguage } from "@/context/langContext";
 import { useMobile } from "@/context/mobileContext";
 import VerSitioMobile from "@/components/verSitioMobile";
 
-const Uxui = () => {
+const Uxui = (): JSX.Element => {
     const { language } = useLanguage();
     const { isMobile } = useMobile();
     const invitacion = language === 'es' ? 'Ver en Figma' : 'View in Figma'

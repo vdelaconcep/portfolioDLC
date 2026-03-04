@@ -1,3 +1,5 @@
+import type { Transition, Viewport } from "framer-motion";
+
 export const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
@@ -5,7 +7,7 @@ export const fadeInUp = {
     viewport: { once: true, amount: 0.1 }
 };
 
-export const wavy = (index) => ({
+export const wavy = (index: number) => ({
     initial: {
         y: 0,
         opacity: 0
@@ -26,7 +28,7 @@ export const wavy = (index) => ({
     }
 });
 
-export const drag = (index) => ({
+export const drag = (index: number) => ({
     initial: {
         x: -50,
         opacity: 0
@@ -45,4 +47,3 @@ export const drag = (index) => ({
         amount: 0.3
     }
 });
-

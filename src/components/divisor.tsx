@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const Divisor = () => {
+const Divisor = (): JSX.Element => {
     return (
         <motion.div
             className="w-full h-[20px]"
@@ -17,7 +17,7 @@ const Divisor = () => {
                 repeat: Infinity
             }}
         ></motion.div>
-    )
+    );
 };
 
 export default Divisor;

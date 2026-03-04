@@ -7,16 +7,20 @@ import { useLanguage } from "@/context/langContext";
 import { useMobile } from '@/context/mobileContext';
 import BotonMenu from './botonMenu';
 
-const Navegacion = ({ clase }) => {
+interface NavegacionProps {
+    clase?: string;
+}
+
+const Navegacion = ({ clase }: NavegacionProps): JSX.Element => {
 
     const { language } = useLanguage();
 
     const { isMobile } = useMobile();
-    const [menuAbierto, setMenuAbierto] = useState(false);
+    const [menuAbierto, setMenuAbierto] = useState<boolean>(false);
 
-    const bodyRef = useRef(null);
+    const bodyRef = useRef<HTMLElement | null>(null);
 
-    const [inUXUI, setInUXUI] = useState(false);
+    const [inUXUI, setInUXUI] = useState<boolean>(false);
 
     useEffect(() => {
         const uxuiSection = document.getElementById('uxui');
@@ -94,7 +98,7 @@ const Navegacion = ({ clase }) => {
             transition={{ duration: 2 }}
             style={ background }>
             {isMobile ?
-                
+
                 <BotonMenu abierto={menuAbierto} setAbierto={setMenuAbierto} />:
                 <ul className='list-none flex text-lg font-medium text-gray-400'>
                     {itemsNavegacion.map(item =>
@@ -108,12 +112,12 @@ const Navegacion = ({ clase }) => {
                 </ul>
             }
 
-            
+
             <BotonIdioma clase={!isMobile && 'absolute right-10 bottom-1/2 translate-y-1/2'} />
             </motion.nav>
             <AnimatePresence>
             {menuAbierto && isMobile &&
-                
+
                 <motion.article
                     style={background}
                     className="fixed top-[57px] left-0 z-100 w-screen"

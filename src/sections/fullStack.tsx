@@ -7,7 +7,7 @@ import HalMovies from "@/components/halMovies";
 import Aaal from "@/components/aaal";
 
 
-const FullStack = () => {
+const FullStack = (): JSX.Element => {
     const { language } = useLanguage();
     const { isMobile } = useMobile();
 

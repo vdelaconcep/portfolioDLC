@@ -1,14 +1,15 @@
 import logoUBA from '@/assets/img/formacion/UBA.png';
 import logoUTN from '@/assets/img/formacion/UTN.png';
 import logoEIT from '@/assets/img/formacion/EIT.png';
+import { ExperienceData, FormationData, OtherData, ToolItem, SummaryData } from "@/types";
 
-export const resumen = {
+export const resumen: SummaryData = {
     es: '¡Hola! Mi nombre es Valeria. Trabajo en proyectos independientes como desarrolladora Full-stack y estoy también interesada en el diseño UX/UI. Después de más de una década en investigación y docencia universitaria, decidí transitar hacia el área tech para combinar mis habilidades analíticas de resolución de problemas con el desarrollo creativo. Disfruto realizando páginas web y aplicaciones centradas en el usuario, con diseños atractivos y una clara identidad visual',
 
     en: "Hi! My name is Valeria. I'm working on independent projects as a Full-stack developer and I'm also interested in UX/UI design. After over a decade in research and university teaching, I decided to get into tech to combine my analytical problem-solving skills with creative development. I enjoy making user-centered websites and apps with attractive designs and a clear visual identity."
 }
 
-export const experiencia = {
+export const experiencia: ExperienceData = {
     es:[{
         titulo: 'Técnica de laboratorio (metalografía)',
         periodo: '2023 - actual',
@@ -65,7 +66,7 @@ export const experiencia = {
     ]
 };
 
-export const formacion = {
+export const formacion: FormationData = {
     es: [{
         imagen: logoUTN,
         titulo: 'Diplomatura en desarrollo UX/UI',
@@ -86,7 +87,7 @@ export const formacion = {
         institucion: 'Facultad de Ingeniería, UBA',
         sub: 'Tesis pendiente'
         }],
-    
+
     en: [{
         imagen: logoUTN,
         titulo: 'Diploma in UX/UI Development',
@@ -110,7 +111,7 @@ export const formacion = {
 
 };
 
-export const otros = {
+export const otros: OtherData = {
     es: [{
         titulo: 'Idioma inglés',
         descripcion: 'Proficient C2',
@@ -143,7 +144,7 @@ export const otros = {
     }]
 };
 
-export const herramientas = [
+export const herramientas: ToolItem[] = [
     {
         titulo: 'Figma',
         color: '#F24E1E'

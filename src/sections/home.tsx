@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useLanguage } from "@/context/langContext";
 
 
-const Home = () => {
+const Home = (): JSX.Element => {
 
     const { language } = useLanguage();
 

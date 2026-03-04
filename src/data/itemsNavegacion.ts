@@ -1,5 +1,6 @@
+import { NavItem } from "@/types";
 
-export const itemsNavegacion = [
+export const itemsNavegacion: NavItem[] = [
     {
         tituloes: 'Sobre Mí',
         tituloen: 'About me',

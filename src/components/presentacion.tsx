@@ -1,6 +1,12 @@
 import { useMobile } from '@/context/mobileContext';
 
-const Presentacion = ({ titulo, texto, clase }) => {
+interface PresentacionProps {
+    titulo: string;
+    texto: string;
+    clase?: string;
+}
+
+const Presentacion = ({ titulo, texto, clase }: PresentacionProps): JSX.Element => {
     const { isMobile } = useMobile();
     return (
         <article className={`flex justify-center items-end gap-7 ${clase && clase}`}>

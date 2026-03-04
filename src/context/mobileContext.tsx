@@ -1,9 +1,9 @@
+import { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import { MobileContextType } from "@/types";
 
-import { createContext, useContext, useState, useEffect } from "react";
+const MobileContext = createContext<MobileContextType | undefined>(undefined);
 
-const MobileContext = createContext();
-
-export const useMobile = () => {
+export const useMobile = (): MobileContextType => {
     const context = useContext(MobileContext);
 
     if (!context) throw new Error('useMobile debe usarse dentro de MobileProvider');
@@ -11,8 +11,12 @@ export const useMobile = () => {
     return context;
 };
 
-export const MobileProvider = ({ children }) => {
-    const [isMobile, setIsMobile] = useState(false);
+interface MobileProviderProps {
+    children: ReactNode;
+}
+
+export const MobileProvider = ({ children }: MobileProviderProps) => {
+    const [isMobile, setIsMobile] = useState<boolean>(false);
 
     useEffect(() => {
         const checkMobile = () => {

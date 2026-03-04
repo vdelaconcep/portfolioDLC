@@ -1,7 +1,11 @@
 import { useLanguage } from "@/context/langContext";
 import { useMobile } from '@/context/mobileContext';
 
-const BotonIdioma = ({ clase }) => {
+interface BotonIdiomaProps {
+    clase?: string;
+}
+
+const BotonIdioma = ({ clase }: BotonIdiomaProps): JSX.Element => {
     const { language, toggleLanguage } = useLanguage();
     const { isMobile } = useMobile();
 
@@ -22,9 +26,9 @@ const BotonIdioma = ({ clase }) => {
                 title={language === 'es' ? 'Toggle language' : undefined}>
                 ENG
             </button>
-            
+
         </article>
-        
+
     );
 };
 

@@ -1,7 +1,16 @@
 import Triangulo from "@/components/triangulo";
 import { useLanguage } from '@/context/langContext';
 
-const ItemOtros = ({ titulo, descripcion, certificado, link, linkName, clase }) => {
+interface ItemOtrosProps {
+    titulo?: string;
+    descripcion?: string;
+    certificado?: string;
+    link?: string;
+    linkName?: string;
+    clase?: string;
+}
+
+const ItemOtros = ({ titulo, descripcion, certificado, link, linkName, clase }: ItemOtrosProps): JSX.Element => {
     const { language } = useLanguage();
 
     return (
@@ -14,8 +23,8 @@ const ItemOtros = ({ titulo, descripcion, certificado, link, linkName, clase }) 
                 {certificado && <a href={certificado} target="_blank" rel="noopener noreferrer" className="text-[#8473FF] hover:underline">{language === 'es' ? 'Ver certificado' : 'View certificate'}</a>}
                 {link && linkName && <a href={link} target="_blank" rel="noopener noreferrer" className="text-[#8473FF] hover:underline">{linkName}</a>}
             </div>
-            
-            
+
+
         </article>
     );
 };
